@@ -9,6 +9,12 @@
 	],
 "creatorBuild": "25813",
 "files": {
+	"\/.sass-cache\/3cf290a388d4981e72bb3d57f3377da30c3c7376\/style.scssc": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/.sass-cache\/3cf290a388d4981e72bb3d57f3377da30c3c7376\/style.scssc",
+		"oF": 0
+		},
 	"\/404.php": {
 		"ft": 8192,
 		"oA": 2,
@@ -26,6 +32,26 @@
 		"oA": 2,
 		"oAP": "\/archive-market.php",
 		"oF": 0
+		},
+	"\/css\/style-min.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "\/css\/style-min-min.css",
+		"oF": 0,
+		"oS": 0
+		},
+	"\/css\/style.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "\/css\/style-min.css",
+		"oF": 0,
+		"oS": 0
 		},
 	"\/dmplocal\/dmplocal.php": {
 		"ft": 8192,
@@ -113,8 +139,8 @@
 		"oA": 0,
 		"oAP": "\/images\/amador.png",
 		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
+		"oIPL": 1,
+		"opt": 1,
 		"oT": 1,
 		"q": 100
 		},
@@ -124,8 +150,8 @@
 		"oA": 0,
 		"oAP": "\/images\/atlas-logo.png",
 		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
+		"oIPL": 1,
+		"opt": 1,
 		"oT": 1,
 		"q": 100
 		},
@@ -135,8 +161,8 @@
 		"oA": 0,
 		"oAP": "\/images\/bount-logo.png",
 		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
+		"oIPL": 1,
+		"opt": 1,
 		"oT": 1,
 		"q": 100
 		},
@@ -146,8 +172,8 @@
 		"oA": 0,
 		"oAP": "\/images\/calendar.png",
 		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
+		"oIPL": 1,
+		"opt": 1,
 		"oT": 1,
 		"q": 100
 		},
@@ -157,8 +183,8 @@
 		"oA": 0,
 		"oAP": "\/images\/cra-logo.png",
 		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
+		"oIPL": 1,
+		"opt": 1,
 		"oT": 1,
 		"q": 100
 		},
@@ -168,8 +194,8 @@
 		"oA": 0,
 		"oAP": "\/images\/dsp-logo.png",
 		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
+		"oIPL": 1,
+		"opt": 1,
 		"oT": 1,
 		"q": 100
 		},
@@ -179,8 +205,8 @@
 		"oA": 0,
 		"oAP": "\/images\/ElDorado.png",
 		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
+		"oIPL": 1,
+		"opt": 1,
 		"oT": 1,
 		"q": 100
 		},
@@ -190,322 +216,333 @@
 		"oA": 0,
 		"oAP": "\/images\/farm-logo.png",
 		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
+		"oIPL": 1,
+		"opt": 1,
 		"oT": 1,
 		"q": 100
 		},
-	"\/images\/favicon\/android-chrome-144x144.png": {
+	"\/images\/fav\/android-icon-144x144.png": {
 		"ft": 32768,
-		"iS": 6115,
-		"oA": 0,
-		"oAP": "\/images\/favicon\/android-chrome-144x144.png",
+		"iS": 2818,
+		"oA": 1,
+		"oAP": "\/images\/fav\/android-icon-144x144.png",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
-		"oT": 1,
+		"oT": 2,
 		"q": 100
 		},
-	"\/images\/favicon\/android-chrome-192x192.png": {
+	"\/images\/fav\/android-icon-192x192.png": {
 		"ft": 32768,
-		"iS": 8372,
-		"oA": 0,
-		"oAP": "\/images\/favicon\/android-chrome-192x192.png",
+		"iS": 3620,
+		"oA": 1,
+		"oAP": "\/images\/fav\/android-icon-192x192.png",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
-		"oT": 1,
+		"oT": 2,
 		"q": 100
 		},
-	"\/images\/favicon\/android-chrome-36x36.png": {
+	"\/images\/fav\/android-icon-36x36.png": {
 		"ft": 32768,
-		"iS": 1703,
-		"oA": 0,
-		"oAP": "\/images\/favicon\/android-chrome-36x36.png",
+		"iS": 839,
+		"oA": 1,
+		"oAP": "\/images\/fav\/android-icon-36x36.png",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
-		"oT": 1,
+		"oT": 2,
 		"q": 100
 		},
-	"\/images\/favicon\/android-chrome-48x48.png": {
+	"\/images\/fav\/android-icon-48x48.png": {
 		"ft": 32768,
-		"iS": 2104,
-		"oA": 0,
-		"oAP": "\/images\/favicon\/android-chrome-48x48.png",
+		"iS": 1049,
+		"oA": 1,
+		"oAP": "\/images\/fav\/android-icon-48x48.png",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
-		"oT": 1,
+		"oT": 2,
 		"q": 100
 		},
-	"\/images\/favicon\/android-chrome-72x72.png": {
+	"\/images\/fav\/android-icon-72x72.png": {
 		"ft": 32768,
-		"iS": 3023,
-		"oA": 0,
-		"oAP": "\/images\/favicon\/android-chrome-72x72.png",
+		"iS": 1525,
+		"oA": 1,
+		"oAP": "\/images\/fav\/android-icon-72x72.png",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
-		"oT": 1,
+		"oT": 2,
 		"q": 100
 		},
-	"\/images\/favicon\/android-chrome-96x96.png": {
+	"\/images\/fav\/android-icon-96x96.png": {
 		"ft": 32768,
-		"iS": 3936,
-		"oA": 0,
-		"oAP": "\/images\/favicon\/android-chrome-96x96.png",
+		"iS": 1966,
+		"oA": 1,
+		"oAP": "\/images\/fav\/android-icon-96x96.png",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
-		"oT": 1,
+		"oT": 2,
 		"q": 100
 		},
-	"\/images\/favicon\/apple-touch-icon-114x114.png": {
+	"\/images\/fav\/apple-icon-114x114.png": {
 		"ft": 32768,
-		"iS": 4829,
-		"oA": 0,
-		"oAP": "\/images\/favicon\/apple-touch-icon-114x114.png",
+		"iS": 2274,
+		"oA": 1,
+		"oAP": "\/images\/fav\/apple-icon-114x114.png",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
-		"oT": 1,
+		"oT": 2,
 		"q": 100
 		},
-	"\/images\/favicon\/apple-touch-icon-120x120.png": {
+	"\/images\/fav\/apple-icon-120x120.png": {
 		"ft": 32768,
-		"iS": 5065,
-		"oA": 0,
-		"oAP": "\/images\/favicon\/apple-touch-icon-120x120.png",
+		"iS": 2397,
+		"oA": 1,
+		"oAP": "\/images\/fav\/apple-icon-120x120.png",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
-		"oT": 1,
+		"oT": 2,
 		"q": 100
 		},
-	"\/images\/favicon\/apple-touch-icon-144x144.png": {
+	"\/images\/fav\/apple-icon-144x144.png": {
 		"ft": 32768,
-		"iS": 6305,
-		"oA": 0,
-		"oAP": "\/images\/favicon\/apple-touch-icon-144x144.png",
+		"iS": 2818,
+		"oA": 1,
+		"oAP": "\/images\/fav\/apple-icon-144x144.png",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
-		"oT": 1,
+		"oT": 2,
 		"q": 100
 		},
-	"\/images\/favicon\/apple-touch-icon-152x152.png": {
+	"\/images\/fav\/apple-icon-152x152.png": {
 		"ft": 32768,
-		"iS": 6729,
-		"oA": 0,
-		"oAP": "\/images\/favicon\/apple-touch-icon-152x152.png",
+		"iS": 2963,
+		"oA": 1,
+		"oAP": "\/images\/fav\/apple-icon-152x152.png",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
-		"oT": 1,
+		"oT": 2,
 		"q": 100
 		},
-	"\/images\/favicon\/apple-touch-icon-180x180.png": {
+	"\/images\/fav\/apple-icon-180x180.png": {
 		"ft": 32768,
-		"iS": 8120,
-		"oA": 0,
-		"oAP": "\/images\/favicon\/apple-touch-icon-180x180.png",
+		"iS": 3375,
+		"oA": 1,
+		"oAP": "\/images\/fav\/apple-icon-180x180.png",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
-		"oT": 1,
+		"oT": 2,
 		"q": 100
 		},
-	"\/images\/favicon\/apple-touch-icon-57x57.png": {
+	"\/images\/fav\/apple-icon-57x57.png": {
 		"ft": 32768,
-		"iS": 2475,
-		"oA": 0,
-		"oAP": "\/images\/favicon\/apple-touch-icon-57x57.png",
+		"iS": 1264,
+		"oA": 1,
+		"oAP": "\/images\/fav\/apple-icon-57x57.png",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
-		"oT": 1,
+		"oT": 2,
 		"q": 100
 		},
-	"\/images\/favicon\/apple-touch-icon-60x60.png": {
+	"\/images\/fav\/apple-icon-60x60.png": {
 		"ft": 32768,
-		"iS": 2599,
-		"oA": 0,
-		"oAP": "\/images\/favicon\/apple-touch-icon-60x60.png",
+		"iS": 1272,
+		"oA": 1,
+		"oAP": "\/images\/fav\/apple-icon-60x60.png",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
-		"oT": 1,
+		"oT": 2,
 		"q": 100
 		},
-	"\/images\/favicon\/apple-touch-icon-72x72.png": {
+	"\/images\/fav\/apple-icon-72x72.png": {
 		"ft": 32768,
-		"iS": 3086,
-		"oA": 0,
-		"oAP": "\/images\/favicon\/apple-touch-icon-72x72.png",
+		"iS": 1524,
+		"oA": 1,
+		"oAP": "\/images\/fav\/apple-icon-72x72.png",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
-		"oT": 1,
+		"oT": 2,
 		"q": 100
 		},
-	"\/images\/favicon\/apple-touch-icon-76x76.png": {
+	"\/images\/fav\/apple-icon-76x76.png": {
 		"ft": 32768,
-		"iS": 3209,
-		"oA": 0,
-		"oAP": "\/images\/favicon\/apple-touch-icon-76x76.png",
+		"iS": 1640,
+		"oA": 1,
+		"oAP": "\/images\/fav\/apple-icon-76x76.png",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
-		"oT": 1,
+		"oT": 2,
 		"q": 100
 		},
-	"\/images\/favicon\/apple-touch-icon-precomposed.png": {
+	"\/images\/fav\/apple-icon-precomposed.png": {
 		"ft": 32768,
-		"iS": 8267,
-		"oA": 0,
-		"oAP": "\/images\/favicon\/apple-touch-icon-precomposed.png",
+		"iS": 6814,
+		"oA": 1,
+		"oAP": "\/images\/fav\/apple-icon-precomposed.png",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
-		"oT": 1,
+		"oT": 2,
 		"q": 100
 		},
-	"\/images\/favicon\/apple-touch-icon.png": {
+	"\/images\/fav\/apple-icon.png": {
 		"ft": 32768,
-		"iS": 8120,
-		"oA": 0,
-		"oAP": "\/images\/favicon\/apple-touch-icon.png",
+		"iS": 3620,
+		"oA": 1,
+		"oAP": "\/images\/fav\/apple-icon.png",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
-		"oT": 1,
+		"oT": 2,
 		"q": 100
 		},
-	"\/images\/favicon\/browserconfig.xml": {
+	"\/images\/fav\/apple-touch-icon-120x120-precomposed.png": {
+		"ft": 32768,
+		"iS": 1274,
+		"oA": 1,
+		"oAP": "\/images\/fav\/apple-touch-icon-120x120-precomposed.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 2,
+		"q": 100
+		},
+	"\/images\/fav\/apple-touch-icon-120x120.png": {
+		"ft": 32768,
+		"iS": 1272,
+		"oA": 1,
+		"oAP": "\/images\/fav\/apple-touch-icon-120x120.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 2,
+		"q": 100
+		},
+	"\/images\/fav\/apple-touch-icon-precomposed.png": {
+		"ft": 32768,
+		"iS": 4116,
+		"oA": 1,
+		"oAP": "\/images\/fav\/apple-touch-icon-precomposed.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 2,
+		"q": 100
+		},
+	"\/images\/fav\/apple-touch-icon.png": {
+		"ft": 32768,
+		"iS": 9994,
+		"oA": 1,
+		"oAP": "\/images\/fav\/apple-touch-icon.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 2,
+		"q": 100
+		},
+	"\/images\/fav\/browserconfig.xml": {
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/images\/favicon\/browserconfig.xml",
+		"oAP": "\/images\/fav\/browserconfig.xml",
 		"oF": 0
 		},
-	"\/images\/favicon\/favicon-16x16.png": {
-		"ft": 32768,
-		"iS": 1176,
-		"oA": 0,
-		"oAP": "\/images\/favicon\/favicon-16x16.png",
-		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
-		"oT": 1,
-		"q": 100
-		},
-	"\/images\/favicon\/favicon-194x194.png": {
-		"ft": 32768,
-		"iS": 10471,
-		"oA": 0,
-		"oAP": "\/images\/favicon\/favicon-194x194.png",
-		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
-		"oT": 1,
-		"q": 100
-		},
-	"\/images\/favicon\/favicon-32x32.png": {
+	"\/images\/fav\/favicon-32x32.png": {
 		"ft": 32768,
 		"iS": 2010,
 		"oA": 0,
-		"oAP": "\/images\/favicon\/favicon-32x32.png",
+		"oAP": "\/images\/fav\/favicon-32x32.png",
 		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
+		"oIPL": 1,
+		"opt": 1,
 		"oT": 1,
 		"q": 100
 		},
-	"\/images\/favicon\/favicon-96x96.png": {
+	"\/images\/fav\/favicon-96x96.png": {
 		"ft": 32768,
 		"iS": 4778,
 		"oA": 0,
-		"oAP": "\/images\/favicon\/favicon-96x96.png",
+		"oAP": "\/images\/fav\/favicon-96x96.png",
 		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
+		"oIPL": 1,
+		"opt": 1,
 		"oT": 1,
 		"q": 100
 		},
-	"\/images\/favicon\/favicon.ico": {
+	"\/images\/fav\/favicon.ico": {
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/images\/favicon\/favicon.ico",
+		"oAP": "\/images\/fav\/favicon.ico",
 		"oF": 0
 		},
-	"\/images\/favicon\/manifest.json": {
+	"\/images\/fav\/manifest.json": {
 		"ft": 524288,
 		"oA": 1,
-		"oAP": "\/images\/favicon\/manifest-min.json",
+		"oAP": "\/images\/fav\/manifest-min.json",
 		"oF": 0,
 		"oO": 0,
 		"oS": 1
 		},
-	"\/images\/favicon\/mstile-144x144.png": {
+	"\/images\/fav\/ms-icon-144x144.png": {
 		"ft": 32768,
-		"iS": 7460,
-		"oA": 0,
-		"oAP": "\/images\/favicon\/mstile-144x144.png",
+		"iS": 2818,
+		"oA": 1,
+		"oAP": "\/images\/fav\/ms-icon-144x144.png",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
-		"oT": 1,
+		"oT": 2,
 		"q": 100
 		},
-	"\/images\/favicon\/mstile-150x150.png": {
+	"\/images\/fav\/ms-icon-150x150.png": {
 		"ft": 32768,
-		"iS": 6765,
-		"oA": 0,
-		"oAP": "\/images\/favicon\/mstile-150x150.png",
+		"iS": 2881,
+		"oA": 1,
+		"oAP": "\/images\/fav\/ms-icon-150x150.png",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
-		"oT": 1,
+		"oT": 2,
 		"q": 100
 		},
-	"\/images\/favicon\/mstile-310x150.png": {
+	"\/images\/fav\/ms-icon-310x310.png": {
 		"ft": 32768,
-		"iS": 7025,
-		"oA": 0,
-		"oAP": "\/images\/favicon\/mstile-310x150.png",
+		"iS": 5485,
+		"oA": 1,
+		"oAP": "\/images\/fav\/ms-icon-310x310.png",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
-		"oT": 1,
+		"oT": 2,
 		"q": 100
 		},
-	"\/images\/favicon\/mstile-310x310.png": {
+	"\/images\/fav\/ms-icon-70x70.png": {
 		"ft": 32768,
-		"iS": 15038,
-		"oA": 0,
-		"oAP": "\/images\/favicon\/mstile-310x310.png",
+		"iS": 1492,
+		"oA": 1,
+		"oAP": "\/images\/fav\/ms-icon-70x70.png",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
-		"oT": 1,
+		"oT": 2,
 		"q": 100
 		},
-	"\/images\/favicon\/mstile-70x70.png": {
-		"ft": 32768,
-		"iS": 4791,
-		"oA": 0,
-		"oAP": "\/images\/favicon\/mstile-70x70.png",
-		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
-		"oT": 1,
-		"q": 100
-		},
-	"\/images\/favicon\/safari-pinned-tab.svg": {
+	"\/images\/fav\/safari-pinned-tab.svg": {
 		"ft": 2097152,
 		"miP": 0,
 		"oA": 2,
-		"oAP": "\/images\/favicon\/safari-pinned-tab.svg",
+		"oAP": "\/images\/fav\/safari-pinned-tab.svg",
 		"oF": 0,
 		"opt": 0,
 		"plM": 3758088159,
@@ -517,8 +554,8 @@
 		"oA": 0,
 		"oAP": "\/images\/ico-close.png",
 		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
+		"oIPL": 1,
+		"opt": 1,
 		"oT": 1,
 		"q": 100
 		},
@@ -529,7 +566,7 @@
 		"oAP": "\/images\/img01.jpg",
 		"oF": 0,
 		"oIPL": 0,
-		"opt": 0,
+		"opt": 1,
 		"q": 100
 		},
 	"\/images\/img02.jpg": {
@@ -539,7 +576,7 @@
 		"oAP": "\/images\/img02.jpg",
 		"oF": 0,
 		"oIPL": 0,
-		"opt": 0,
+		"opt": 1,
 		"q": 100
 		},
 	"\/images\/img03.jpg": {
@@ -549,7 +586,7 @@
 		"oAP": "\/images\/img03.jpg",
 		"oF": 0,
 		"oIPL": 0,
-		"opt": 0,
+		"opt": 1,
 		"q": 100
 		},
 	"\/images\/img04.jpg": {
@@ -559,7 +596,7 @@
 		"oAP": "\/images\/img04.jpg",
 		"oF": 0,
 		"oIPL": 0,
-		"opt": 0,
+		"opt": 1,
 		"q": 100
 		},
 	"\/images\/img05.jpg": {
@@ -569,7 +606,7 @@
 		"oAP": "\/images\/img05.jpg",
 		"oF": 0,
 		"oIPL": 0,
-		"opt": 0,
+		"opt": 1,
 		"q": 100
 		},
 	"\/images\/img06.jpg": {
@@ -579,7 +616,7 @@
 		"oAP": "\/images\/img06.jpg",
 		"oF": 0,
 		"oIPL": 0,
-		"opt": 0,
+		"opt": 1,
 		"q": 100
 		},
 	"\/images\/img07.jpg": {
@@ -589,7 +626,7 @@
 		"oAP": "\/images\/img07.jpg",
 		"oF": 0,
 		"oIPL": 0,
-		"opt": 0,
+		"opt": 1,
 		"q": 100
 		},
 	"\/images\/img08.jpg": {
@@ -599,7 +636,7 @@
 		"oAP": "\/images\/img08.jpg",
 		"oF": 0,
 		"oIPL": 0,
-		"opt": 0,
+		"opt": 1,
 		"q": 100
 		},
 	"\/images\/img09.jpg": {
@@ -609,7 +646,7 @@
 		"oAP": "\/images\/img09.jpg",
 		"oF": 0,
 		"oIPL": 0,
-		"opt": 0,
+		"opt": 1,
 		"q": 100
 		},
 	"\/images\/img10.jpg": {
@@ -619,7 +656,7 @@
 		"oAP": "\/images\/img10.jpg",
 		"oF": 0,
 		"oIPL": 0,
-		"opt": 0,
+		"opt": 1,
 		"q": 100
 		},
 	"\/images\/img11.jpg": {
@@ -629,7 +666,7 @@
 		"oAP": "\/images\/img11.jpg",
 		"oF": 0,
 		"oIPL": 0,
-		"opt": 0,
+		"opt": 1,
 		"q": 100
 		},
 	"\/images\/img12.jpg": {
@@ -639,7 +676,7 @@
 		"oAP": "\/images\/img12.jpg",
 		"oF": 0,
 		"oIPL": 0,
-		"opt": 0,
+		"opt": 1,
 		"q": 100
 		},
 	"\/images\/img13.jpg": {
@@ -649,7 +686,7 @@
 		"oAP": "\/images\/img13.jpg",
 		"oF": 0,
 		"oIPL": 0,
-		"opt": 0,
+		"opt": 1,
 		"q": 100
 		},
 	"\/images\/img14.jpg": {
@@ -659,7 +696,7 @@
 		"oAP": "\/images\/img14.jpg",
 		"oF": 0,
 		"oIPL": 0,
-		"opt": 0,
+		"opt": 1,
 		"q": 100
 		},
 	"\/images\/img15.jpg": {
@@ -669,7 +706,7 @@
 		"oAP": "\/images\/img15.jpg",
 		"oF": 0,
 		"oIPL": 0,
-		"opt": 0,
+		"opt": 1,
 		"q": 100
 		},
 	"\/images\/img16.png": {
@@ -678,8 +715,8 @@
 		"oA": 0,
 		"oAP": "\/images\/img16.png",
 		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
+		"oIPL": 1,
+		"opt": 1,
 		"oT": 1,
 		"q": 100
 		},
@@ -689,8 +726,8 @@
 		"oA": 0,
 		"oAP": "\/images\/img17.png",
 		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
+		"oIPL": 1,
+		"opt": 1,
 		"oT": 1,
 		"q": 100
 		},
@@ -700,8 +737,8 @@
 		"oA": 0,
 		"oAP": "\/images\/img18.png",
 		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
+		"oIPL": 1,
+		"opt": 1,
 		"oT": 1,
 		"q": 100
 		},
@@ -711,8 +748,8 @@
 		"oA": 0,
 		"oAP": "\/images\/img19.png",
 		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
+		"oIPL": 1,
+		"opt": 1,
 		"oT": 1,
 		"q": 100
 		},
@@ -722,8 +759,8 @@
 		"oA": 0,
 		"oAP": "\/images\/img20.png",
 		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
+		"oIPL": 1,
+		"opt": 1,
 		"oT": 1,
 		"q": 100
 		},
@@ -733,8 +770,8 @@
 		"oA": 0,
 		"oAP": "\/images\/img21.png",
 		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
+		"oIPL": 1,
+		"opt": 1,
 		"oT": 1,
 		"q": 100
 		},
@@ -744,8 +781,8 @@
 		"oA": 0,
 		"oAP": "\/images\/img22.png",
 		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
+		"oIPL": 1,
+		"opt": 1,
 		"oT": 1,
 		"q": 100
 		},
@@ -755,8 +792,8 @@
 		"oA": 0,
 		"oAP": "\/images\/img23.png",
 		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
+		"oIPL": 1,
+		"opt": 1,
 		"oT": 1,
 		"q": 100
 		},
@@ -766,8 +803,8 @@
 		"oA": 0,
 		"oAP": "\/images\/img24.png",
 		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
+		"oIPL": 1,
+		"opt": 1,
 		"oT": 1,
 		"q": 100
 		},
@@ -777,8 +814,8 @@
 		"oA": 0,
 		"oAP": "\/images\/img25.png",
 		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
+		"oIPL": 1,
+		"opt": 1,
 		"oT": 1,
 		"q": 100
 		},
@@ -788,8 +825,8 @@
 		"oA": 0,
 		"oAP": "\/images\/img26.png",
 		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
+		"oIPL": 1,
+		"opt": 1,
 		"oT": 1,
 		"q": 100
 		},
@@ -799,8 +836,8 @@
 		"oA": 0,
 		"oAP": "\/images\/img27.png",
 		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
+		"oIPL": 1,
+		"opt": 1,
 		"oT": 1,
 		"q": 100
 		},
@@ -811,7 +848,7 @@
 		"oAP": "\/images\/img28.jpg",
 		"oF": 0,
 		"oIPL": 0,
-		"opt": 0,
+		"opt": 1,
 		"q": 100
 		},
 	"\/images\/img29.jpg": {
@@ -821,7 +858,7 @@
 		"oAP": "\/images\/img29.jpg",
 		"oF": 0,
 		"oIPL": 0,
-		"opt": 0,
+		"opt": 1,
 		"q": 100
 		},
 	"\/images\/img30.jpg": {
@@ -831,7 +868,7 @@
 		"oAP": "\/images\/img30.jpg",
 		"oF": 0,
 		"oIPL": 0,
-		"opt": 0,
+		"opt": 1,
 		"q": 100
 		},
 	"\/images\/img31.jpg": {
@@ -841,7 +878,7 @@
 		"oAP": "\/images\/img31.jpg",
 		"oF": 0,
 		"oIPL": 0,
-		"opt": 0,
+		"opt": 1,
 		"q": 100
 		},
 	"\/images\/img32.jpg": {
@@ -851,7 +888,7 @@
 		"oAP": "\/images\/img32.jpg",
 		"oF": 0,
 		"oIPL": 0,
-		"opt": 0,
+		"opt": 1,
 		"q": 100
 		},
 	"\/images\/img33.jpg": {
@@ -861,7 +898,7 @@
 		"oAP": "\/images\/img33.jpg",
 		"oF": 0,
 		"oIPL": 0,
-		"opt": 0,
+		"opt": 1,
 		"q": 100
 		},
 	"\/images\/img34.jpg": {
@@ -871,7 +908,7 @@
 		"oAP": "\/images\/img34.jpg",
 		"oF": 0,
 		"oIPL": 0,
-		"opt": 0,
+		"opt": 1,
 		"q": 100
 		},
 	"\/images\/img35.jpg": {
@@ -881,7 +918,7 @@
 		"oAP": "\/images\/img35.jpg",
 		"oF": 0,
 		"oIPL": 0,
-		"opt": 0,
+		"opt": 1,
 		"q": 100
 		},
 	"\/images\/img36.jpg": {
@@ -891,7 +928,7 @@
 		"oAP": "\/images\/img36.jpg",
 		"oF": 0,
 		"oIPL": 0,
-		"opt": 0,
+		"opt": 1,
 		"q": 100
 		},
 	"\/images\/img37.jpg": {
@@ -901,7 +938,7 @@
 		"oAP": "\/images\/img37.jpg",
 		"oF": 0,
 		"oIPL": 0,
-		"opt": 0,
+		"opt": 1,
 		"q": 100
 		},
 	"\/images\/img38.jpg": {
@@ -911,7 +948,7 @@
 		"oAP": "\/images\/img38.jpg",
 		"oF": 0,
 		"oIPL": 0,
-		"opt": 0,
+		"opt": 1,
 		"q": 100
 		},
 	"\/images\/img39.jpg": {
@@ -921,7 +958,7 @@
 		"oAP": "\/images\/img39.jpg",
 		"oF": 0,
 		"oIPL": 0,
-		"opt": 0,
+		"opt": 1,
 		"q": 100
 		},
 	"\/images\/img40.jpg": {
@@ -931,7 +968,7 @@
 		"oAP": "\/images\/img40.jpg",
 		"oF": 0,
 		"oIPL": 0,
-		"opt": 0,
+		"opt": 1,
 		"q": 100
 		},
 	"\/images\/img41.jpg": {
@@ -941,7 +978,7 @@
 		"oAP": "\/images\/img41.jpg",
 		"oF": 0,
 		"oIPL": 0,
-		"opt": 0,
+		"opt": 1,
 		"q": 100
 		},
 	"\/images\/img42.jpg": {
@@ -951,7 +988,7 @@
 		"oAP": "\/images\/img42.jpg",
 		"oF": 0,
 		"oIPL": 0,
-		"opt": 0,
+		"opt": 1,
 		"q": 100
 		},
 	"\/images\/img43.jpg": {
@@ -961,7 +998,7 @@
 		"oAP": "\/images\/img43.jpg",
 		"oF": 0,
 		"oIPL": 0,
-		"opt": 0,
+		"opt": 1,
 		"q": 100
 		},
 	"\/images\/img44.jpg": {
@@ -971,7 +1008,7 @@
 		"oAP": "\/images\/img44.jpg",
 		"oF": 0,
 		"oIPL": 0,
-		"opt": 0,
+		"opt": 1,
 		"q": 100
 		},
 	"\/images\/img45.jpg": {
@@ -981,7 +1018,7 @@
 		"oAP": "\/images\/img45.jpg",
 		"oF": 0,
 		"oIPL": 0,
-		"opt": 0,
+		"opt": 1,
 		"q": 100
 		},
 	"\/images\/img46.jpg": {
@@ -991,7 +1028,7 @@
 		"oAP": "\/images\/img46.jpg",
 		"oF": 0,
 		"oIPL": 0,
-		"opt": 0,
+		"opt": 1,
 		"q": 100
 		},
 	"\/images\/img47.jpg": {
@@ -1001,7 +1038,7 @@
 		"oAP": "\/images\/img47.jpg",
 		"oF": 0,
 		"oIPL": 0,
-		"opt": 0,
+		"opt": 1,
 		"q": 100
 		},
 	"\/images\/img48.jpg": {
@@ -1011,7 +1048,7 @@
 		"oAP": "\/images\/img48.jpg",
 		"oF": 0,
 		"oIPL": 0,
-		"opt": 0,
+		"opt": 1,
 		"q": 100
 		},
 	"\/images\/img49.jpg": {
@@ -1021,7 +1058,7 @@
 		"oAP": "\/images\/img49.jpg",
 		"oF": 0,
 		"oIPL": 0,
-		"opt": 0,
+		"opt": 1,
 		"q": 100
 		},
 	"\/images\/img50.jpg": {
@@ -1031,7 +1068,7 @@
 		"oAP": "\/images\/img50.jpg",
 		"oF": 0,
 		"oIPL": 0,
-		"opt": 0,
+		"opt": 1,
 		"q": 100
 		},
 	"\/images\/img51.jpg": {
@@ -1041,7 +1078,7 @@
 		"oAP": "\/images\/img51.jpg",
 		"oF": 0,
 		"oIPL": 0,
-		"opt": 0,
+		"opt": 1,
 		"q": 100
 		},
 	"\/images\/img52.jpg": {
@@ -1051,7 +1088,7 @@
 		"oAP": "\/images\/img52.jpg",
 		"oF": 0,
 		"oIPL": 0,
-		"opt": 0,
+		"opt": 1,
 		"q": 100
 		},
 	"\/images\/img53.jpg": {
@@ -1061,7 +1098,7 @@
 		"oAP": "\/images\/img53.jpg",
 		"oF": 0,
 		"oIPL": 0,
-		"opt": 0,
+		"opt": 1,
 		"q": 100
 		},
 	"\/images\/img54.jpg": {
@@ -1071,7 +1108,7 @@
 		"oAP": "\/images\/img54.jpg",
 		"oF": 0,
 		"oIPL": 0,
-		"opt": 0,
+		"opt": 1,
 		"q": 100
 		},
 	"\/images\/lexus-logo.png": {
@@ -1080,42 +1117,42 @@
 		"oA": 0,
 		"oAP": "\/images\/lexus-logo.png",
 		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
+		"oIPL": 1,
+		"opt": 1,
 		"oT": 1,
 		"q": 100
 		},
 	"\/images\/logo-large.png": {
 		"ft": 32768,
-		"iS": 4170,
+		"iS": 5110,
 		"oA": 0,
 		"oAP": "\/images\/logo-large.png",
 		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
+		"oIPL": 1,
+		"opt": 1,
 		"oT": 1,
 		"q": 100
 		},
 	"\/images\/logo-small.png": {
 		"ft": 32768,
-		"iS": 2462,
-		"oA": 0,
+		"iS": 1483,
+		"oA": 1,
 		"oAP": "\/images\/logo-small.png",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
-		"oT": 1,
+		"oT": 2,
 		"q": 100
 		},
 	"\/images\/logo2.png": {
 		"ft": 32768,
-		"iS": 8461,
-		"oA": 0,
+		"iS": 9404,
+		"oA": 1,
 		"oAP": "\/images\/logo2.png",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
-		"oT": 1,
+		"oT": 2,
 		"q": 100
 		},
 	"\/images\/Placer.png": {
@@ -1146,8 +1183,8 @@
 		"oA": 0,
 		"oAP": "\/images\/sacra-logo.png",
 		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
+		"oIPL": 1,
+		"opt": 1,
 		"oT": 1,
 		"q": 100
 		},
@@ -1157,8 +1194,8 @@
 		"oA": 0,
 		"oAP": "\/images\/save-logo.png",
 		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
+		"oIPL": 1,
+		"opt": 1,
 		"oT": 1,
 		"q": 100
 		},
@@ -1168,8 +1205,8 @@
 		"oA": 0,
 		"oAP": "\/images\/sep01.png",
 		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
+		"oIPL": 1,
+		"opt": 1,
 		"oT": 1,
 		"q": 100
 		},
@@ -1179,8 +1216,8 @@
 		"oA": 0,
 		"oAP": "\/images\/sep02.png",
 		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
+		"oIPL": 1,
+		"opt": 1,
 		"oT": 1,
 		"q": 100
 		},
@@ -1190,20 +1227,20 @@
 		"oA": 0,
 		"oAP": "\/images\/sep03.png",
 		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
+		"oIPL": 1,
+		"opt": 1,
 		"oT": 1,
 		"q": 100
 		},
 	"\/images\/sep04.png": {
 		"ft": 32768,
 		"iS": 184,
-		"oA": 0,
+		"oA": 1,
 		"oAP": "\/images\/sep04.png",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
-		"oT": 1,
+		"oT": 2,
 		"q": 100
 		},
 	"\/images\/sep05.png": {
@@ -1212,8 +1249,8 @@
 		"oA": 0,
 		"oAP": "\/images\/sep05.png",
 		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
+		"oIPL": 1,
+		"opt": 1,
 		"oT": 1,
 		"q": 100
 		},
@@ -1223,8 +1260,8 @@
 		"oA": 0,
 		"oAP": "\/images\/sep06.png",
 		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
+		"oIPL": 1,
+		"opt": 1,
 		"oT": 1,
 		"q": 100
 		},
@@ -1234,8 +1271,8 @@
 		"oA": 0,
 		"oAP": "\/images\/sep07.png",
 		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
+		"oIPL": 1,
+		"opt": 1,
 		"oT": 1,
 		"q": 100
 		},
@@ -1245,8 +1282,8 @@
 		"oA": 0,
 		"oAP": "\/images\/sep08.png",
 		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
+		"oIPL": 1,
+		"opt": 1,
 		"oT": 1,
 		"q": 100
 		},
@@ -1256,8 +1293,8 @@
 		"oA": 0,
 		"oAP": "\/images\/sprite.png",
 		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
+		"oIPL": 1,
+		"opt": 1,
 		"oT": 1,
 		"q": 100
 		},
@@ -1278,8 +1315,8 @@
 		"oA": 0,
 		"oAP": "\/images\/ui\/ui-bg_diagonals-thick_18_b81900_40x40.png",
 		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
+		"oIPL": 1,
+		"opt": 1,
 		"oT": 1,
 		"q": 100
 		},
@@ -1289,8 +1326,8 @@
 		"oA": 0,
 		"oAP": "\/images\/ui\/ui-bg_diagonals-thick_20_666666_40x40.png",
 		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
+		"oIPL": 1,
+		"opt": 1,
 		"oT": 1,
 		"q": 100
 		},
@@ -1300,8 +1337,8 @@
 		"oA": 0,
 		"oAP": "\/images\/ui\/ui-bg_flat_10_000000_40x100.png",
 		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
+		"oIPL": 1,
+		"opt": 1,
 		"oT": 1,
 		"q": 100
 		},
@@ -1311,8 +1348,8 @@
 		"oA": 0,
 		"oAP": "\/images\/ui\/ui-bg_glass_100_f6f6f6_1x400.png",
 		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
+		"oIPL": 1,
+		"opt": 1,
 		"oT": 1,
 		"q": 100
 		},
@@ -1322,8 +1359,8 @@
 		"oA": 0,
 		"oAP": "\/images\/ui\/ui-bg_glass_100_fdf5ce_1x400.png",
 		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
+		"oIPL": 1,
+		"opt": 1,
 		"oT": 1,
 		"q": 100
 		},
@@ -1333,8 +1370,8 @@
 		"oA": 0,
 		"oAP": "\/images\/ui\/ui-bg_glass_65_ffffff_1x400.png",
 		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
+		"oIPL": 1,
+		"opt": 1,
 		"oT": 1,
 		"q": 100
 		},
@@ -1344,8 +1381,8 @@
 		"oA": 0,
 		"oAP": "\/images\/ui\/ui-bg_gloss-wave_35_f6a828_500x100.png",
 		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
+		"oIPL": 1,
+		"opt": 1,
 		"oT": 1,
 		"q": 100
 		},
@@ -1355,8 +1392,8 @@
 		"oA": 0,
 		"oAP": "\/images\/ui\/ui-bg_highlight-soft_100_eeeeee_1x100.png",
 		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
+		"oIPL": 1,
+		"opt": 1,
 		"oT": 1,
 		"q": 100
 		},
@@ -1366,8 +1403,8 @@
 		"oA": 0,
 		"oAP": "\/images\/ui\/ui-bg_highlight-soft_75_ffe45c_1x100.png",
 		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
+		"oIPL": 1,
+		"opt": 1,
 		"oT": 1,
 		"q": 100
 		},
@@ -1377,8 +1414,8 @@
 		"oA": 0,
 		"oAP": "\/images\/ui\/ui-icons_222222_256x240.png",
 		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
+		"oIPL": 1,
+		"opt": 1,
 		"oT": 1,
 		"q": 100
 		},
@@ -1388,8 +1425,8 @@
 		"oA": 0,
 		"oAP": "\/images\/ui\/ui-icons_228ef1_256x240.png",
 		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
+		"oIPL": 1,
+		"opt": 1,
 		"oT": 1,
 		"q": 100
 		},
@@ -1399,8 +1436,8 @@
 		"oA": 0,
 		"oAP": "\/images\/ui\/ui-icons_ef8c08_256x240.png",
 		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
+		"oIPL": 1,
+		"opt": 1,
 		"oT": 1,
 		"q": 100
 		},
@@ -1410,8 +1447,8 @@
 		"oA": 0,
 		"oAP": "\/images\/ui\/ui-icons_ffd27a_256x240.png",
 		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
+		"oIPL": 1,
+		"opt": 1,
 		"oT": 1,
 		"q": 100
 		},
@@ -1421,8 +1458,8 @@
 		"oA": 0,
 		"oAP": "\/images\/ui\/ui-icons_ffffff_256x240.png",
 		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
+		"oIPL": 1,
+		"opt": 1,
 		"oT": 1,
 		"q": 100
 		},
@@ -1432,8 +1469,8 @@
 		"oA": 0,
 		"oAP": "\/images\/Yolo.png",
 		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
+		"oIPL": 1,
+		"opt": 1,
 		"oT": 1,
 		"q": 100
 		},
@@ -1443,8 +1480,8 @@
 		"oA": 0,
 		"oAP": "\/images\/Yuba.png",
 		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
+		"oIPL": 1,
+		"opt": 1,
 		"oT": 1,
 		"q": 100
 		},
@@ -1484,15 +1521,18 @@
 		"sC": 1,
 		"tS": 0
 		},
-	"\/js\/style.css": {
+	"\/js\/style.scss": {
 		"aP": 1,
 		"bl": 0,
-		"ft": 16,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
 		"ma": 0,
 		"oA": 0,
-		"oAP": "\/js\/style-min.css",
-		"oF": 0,
-		"oS": 0
+		"oAP": "\/style.css",
+		"oF": 2,
+		"oS": 3,
+		"uL": 1
 		},
 	"\/newsletter-thankyou.php": {
 		"ft": 8192,
@@ -1559,6 +1599,17 @@
 		"oA": 2,
 		"oAP": "\/partials\/page-sidebar.php",
 		"oF": 0
+		},
+	"\/screenshot.png": {
+		"ft": 32768,
+		"iS": 16122,
+		"oA": 1,
+		"oAP": "\/screenshot.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 2,
+		"q": 100
 		},
 	"\/search.php": {
 		"ft": 8192,
@@ -3344,7 +3395,7 @@
 		"shouldRunBless": 0
 		},
 	"languageDefaultsGIF": {
-		"autoOutputAction": 0,
+		"autoOutputAction": 1,
 		"autoOutputPathFilenamePattern": "*.gif",
 		"autoOutputPathRelativePath": "",
 		"autoOutputPathReplace1": "",
@@ -3367,7 +3418,7 @@
 		"useUnixNewlines": 0
 		},
 	"languageDefaultsJPG": {
-		"autoOutputAction": 0,
+		"autoOutputAction": 1,
 		"autoOutputPathFilenamePattern": "*.jpg",
 		"autoOutputPathRelativePath": "",
 		"autoOutputPathReplace1": "",
@@ -3453,13 +3504,13 @@
 		"autoOutputPathStyle": 0
 		},
 	"languageDefaultsPNG": {
-		"autoOutputAction": 0,
+		"autoOutputAction": 1,
 		"autoOutputPathFilenamePattern": "*.png",
 		"autoOutputPathRelativePath": "",
 		"autoOutputPathReplace1": "",
 		"autoOutputPathReplace2": "",
 		"autoOutputPathStyle": 0,
-		"optimizerType": 1,
+		"optimizerType": 2,
 		"quality": 100
 		},
 	"languageDefaultsPUG": {

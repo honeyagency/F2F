@@ -7,7 +7,7 @@ Template Name: Signature Event (extended)
 <?php get_header(); ?>
 
 
-<body class="extended">
+<body class="extended" id="<?php echo get_the_ID(); ?>">
 	<!-- main container of all the page elements -->
 	<div id="wrapper">
 		<!-- header of the page -->
