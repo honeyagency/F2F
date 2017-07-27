@@ -8,6 +8,8 @@ Template Name: Signature Event (extended)
 
 
 <body class="extended" id="<?php echo get_the_ID(); ?>">
+<!-- google tag manager -->
+	<?php get_template_part( 'partials/piece-gatags'); ?>
 	<!-- main container of all the page elements -->
 	<div id="wrapper">
 		<!-- header of the page -->

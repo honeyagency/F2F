@@ -83,6 +83,8 @@ Template Name: Archive Farmers Markets
 
 
 <body>
+<!-- google tag manager -->
+	<?php get_template_part( 'partials/piece-gatags'); ?>
 	<div id="wrapper">
 		<?php get_template_part( 'partials/page-header'); ?>
 		<section class="visual add">
