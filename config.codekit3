@@ -7,7 +7,7 @@
 		"uuidString": "15192465-B721-4349-9216-BC7A82E2FBE5"
 		}
 	],
-"creatorBuild": "25813",
+"creatorBuild": "25849",
 "files": {
 	"\/.sass-cache\/3cf290a388d4981e72bb3d57f3377da30c3c7376\/style.scssc": {
 		"ft": 8192,
@@ -1598,6 +1598,12 @@
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/partials\/page-sidebar.php",
+		"oF": 0
+		},
+	"\/partials\/piece-gatags.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/partials\/piece-gatags.php",
 		"oF": 0
 		},
 	"\/screenshot.png": {
@@ -3596,6 +3602,7 @@
 		},
 	"languageDefaultsUserDefined": [
 		],
+	"overrideExternalServerCSS": 0,
 	"previewPathAddition": "",
 	"skippedFoldersString": "log, _logs, logs, _cache, cache, \/storage\/framework\/sessions, node_modules",
 	"sourceFolderName": "source",
