@@ -2837,9 +2837,8 @@ ol li:before {
     z-index: 1;
     margin-top: -50px;
     margin-left: -25px;
-    width: 110px;
-    height: 110px;
-
+    width: 100px;
+    height: 100px;
 }
 
 .adventure-block ul li .title {
@@ -7517,5 +7516,12 @@ body > .jcf-select-drop.jcf-drop-flipped {
 
     .sign-up-form {
         padding: 25px 20px;
+    }
+}
+
+body.page-11491 {
+    .visual .img-holder img, .visual .img-frame img {
+        display: inline !important;
+        width: 33% !important;
     }
 }
