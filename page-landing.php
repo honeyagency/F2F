@@ -7,8 +7,7 @@ Template Name: Landing
 <?php get_header(); ?>
 
 <body>
-<!-- google tag manager -->
-	<?php get_template_part( 'partials/piece-gatags'); ?>
+
 	<!-- main container of all the page elements -->
 	<div id="wrapper">
 		<!-- header of the page -->
