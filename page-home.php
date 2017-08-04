@@ -103,7 +103,7 @@ foreach ($result['data'] as &$data) {
 							<img src="<?php echo $result['data'][3]['images']['standard_resolution']['url']; ?>" height="343" width="343" alt="">
 						</div>
 					</div>
-					<div class="image-holder two mobile">
+				<!-- 	<div class="image-holder two mobile">
 						<div class="image remove">
 							<img src="<?php echo $header_images[1]['url']; ?>" height="172" width="171" alt="">
 						</div>
@@ -118,8 +118,8 @@ foreach ($result['data'] as &$data) {
 						<div class="image">
 							<img src="<?php echo $header_images[4]['url']; ?>" height="171" width="172" alt="">
 						</div>
-					</div>
-					<div class="image-holder one tablet">
+					</div> -->
+				<!-- 	<div class="image-holder one tablet">
 						<div class="image <?php echo $result['data'][4]['aspect']; ?>">
 							<img src="<?php echo $result['data'][4]['images']['standard_resolution']['url']; ?>" height="343" width="344" alt="">
 						</div>
@@ -136,24 +136,22 @@ foreach ($result['data'] as &$data) {
 						<div class="image <?php echo $result['data'][7]['aspect']; ?>">
 							<img src="<?php echo $result['data'][7]['images']['standard_resolution']['url']; ?>" height="172" width="171" alt="">
 						</div>
-					</div>
+					</div> -->
 				</div>
             <?php }?>
 				<!-- visual caption -->
-				<div class="caption">
+		<!-- 		<div class="caption">
 					<div class="caption-holder">
 						<div class="container">
 							<div class="caption-box">
 								<div class="box-holder">
                                 	<strong class="title">Find a Farm-to-Fork event near you!</strong>
 									<a href="#events" class="more">Check out the events</a>
-									<!--<strong class="title">Farm-to-Fork is all around us.</strong>
-									<a href="/what-we-do/" class="more">What we do</a>-->
 								</div>
 							</div>
 						</div>
 					</div>
-				</div>
+				</div> -->
 			</section>
             <?php if ($teaser_text = get_field('teaser_text')) {?>
 			<div class="popup">
