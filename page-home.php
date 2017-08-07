@@ -2,6 +2,37 @@
 /*
 Template Name: Home
  */
+
+
+function homepageEvents()
+{
+    $posts = get_field('field_558b168a98f48');
+    foreach ($posts as $post) {
+        setup_postdata($post);
+        if (get_field('homepage_image')) {
+
+            $homepage_image = get_field('homepage_image');
+            $homepage_image = new TimberImage($homepage_image);
+        } else {
+            $thumb_id       = get_post_thumbnail_id(get_the_id());
+            $homepage_image = new TimberImage($thumb_id);
+        }
+        $upcoming_events[] = array(
+            'id'             => get_the_id(),
+            'name'           => get_the_title(),
+            'date'           => get_field('date'),
+            'permalink'      => get_permalink(),
+            'description'    => get_excerpt_by_id(get_the_id(), '', 'nolink'),
+            'homepage_image' => $homepage_image,
+            'eventTicketUrl' => get_field('eventTicketUrl'),
+        );
+    }
+
+    return $upcoming_events;
+    wp_reset_postdata();
+}
+
+
 ?>
 
 <?php get_header();?>
@@ -10,13 +41,15 @@ Template Name: Home
 	<!-- main container of all the page elements -->
 	<div id="wrapper">
 		<!-- header of the page -->
-		<?php get_template_part('partials/page-header');?>
-        <?php $header_images = get_field('header_images');?>
-        <?php
+<?php 
+
+get_template_part('partials/page-header');
+$header_images = get_field('header_images');
 // Supply a user id and an access token
 $userid      = "1372446873";
 $clientid    = '34499fdd7c6c482e87af3657cbd67290';
 $accessToken = "1372446873.3a81a9f.b59adfa66bae4a428c7214afc8b7567e";
+$home = homepageEvents();
 
 // Gets our data
 function fetchData($url)
@@ -30,26 +63,7 @@ function fetchData($url)
     return $result;
 }
 
-function objectToArray($d)
-{
-    if (is_object($d)) {
-        // Gets the properties of the given object
-        // with get_object_vars function
-        $d = get_object_vars($d);
-    }
 
-    if (is_array($d)) {
-        /*
-         * Return array converted to object
-         * Using __FUNCTION__ (Magic constant)
-         * for recursive call
-         */
-        return array_map(__FUNCTION__, $d);
-    } else {
-        // Return array
-        return $d;
-    }
-}
 
 // Pulls and parses data.
 $result = fetchData("https://api.instagram.com/v1/users/{$userid}/media/recent/?access_token={$accessToken}&count=8");
@@ -167,45 +181,11 @@ foreach ($result['data'] as &$data) {
             <?php }?>
 		</div>
 		<!-- slideshow -->
-        <?php
 
-$posts = get_field('upcoming_events');
-
-if ($posts): ?>
-
-			<?php foreach ($posts as $post): // variable must be called $post (IMPORTANT) ?>
-							<?php setup_postdata($post);?>
-
-			                <?php
-    if (get_field('homepage_image')):
-
-        $homepage_image = get_field('homepage_image');
-        $homepage_image = $homepage_image['sizes']['medium'];
-
-    else:
-
-        $thumb_id        = get_post_thumbnail_id(get_the_id());
-        $thumb_url_array = wp_get_attachment_image_src($thumb_id, 'medium', true);
-        $homepage_image  = $thumb_url_array[0];
-
-    endif;
-    ?>
-
-							<?php $upcoming_events[] = array('id' => get_the_id(),
-        'name'                                      => get_the_title(),
-        'date'                                      => get_field('date'),
-        'permalink'                                 => get_permalink(),
-        'description'                               => get_excerpt_by_id(get_the_id(), '', 'nolink'),
-        'homepage_image'                            => $homepage_image,
-        'eventTicketUrl'                            => get_field('eventTicketUrl'),
-    );
-    ?>
-
-						<?php endforeach;?>
 			</ul>
-			<?php wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the page works correctly ?>
+			
 
-		<?php endif;?>
+
         <?php if ($upcoming_events_intro = get_field('upcoming_events_intro')): ?>
         <div class="container">
         	<a name="events" style="margin-top:-120px; position:absolute;"></a>

@@ -1540,6 +1540,18 @@
 		"oS": 3,
 		"uL": 1
 		},
+	"\/library\/custom-fields.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/library\/custom-fields.php",
+		"oF": 0
+		},
+	"\/library\/farmtofork.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/library\/farmtofork.php",
+		"oF": 0
+		},
 	"\/newsletter-thankyou.php": {
 		"ft": 8192,
 		"oA": 2,
