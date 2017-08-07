@@ -41,9 +41,9 @@ $homeEvents = homepageEvents();
     foreach ($homeEvents as $event) {
         ?>
     <div class="col grid--sm-third grid-item block--singe--event" id="event-<?php echo $event['id']; ?>">
-    	<img src="<?php echo $event['homepage_image']; ?>" width="" alt="<?php echo $event['name']; ?>">
-    	<time class="color--gold"><?php $date = date_create($event['date']); echo date_format($date, "M d");?></time>
-    	<h2 class="color--black"><?php echo $event['name']; ?></h2>
+    	<a href="<?php echo $event['permalink']; ?>"><img src="<?php echo $event['homepage_image']; ?>" width="" alt="<?php echo $event['name']; ?>"></a>
+    	<a href="<?php echo $event['permalink']; ?>"><time class="color--gold"><?php $date = date_create($event['date']); echo date_format($date, "M d");?></time></a>
+    	<a href="<?php echo $event['permalink']; ?>"><h2 class="color--black"><?php echo $event['name']; ?></h2></a>
     	<?php echo $event['description']; ?>
     	<a href="<?php echo $event['permalink']; ?>">Read More</a>
 <?php 
