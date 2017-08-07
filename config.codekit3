@@ -33,26 +33,6 @@
 		"oAP": "\/archive-market.php",
 		"oF": 0
 		},
-	"\/css\/style-min.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/css\/style-min-min.css",
-		"oF": 0,
-		"oS": 0
-		},
-	"\/css\/style.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/css\/style-min.css",
-		"oF": 0,
-		"oS": 0
-		},
 	"\/dmplocal\/dmplocal.php": {
 		"ft": 8192,
 		"oA": 2,
@@ -1527,18 +1507,17 @@
 		"sC": 1,
 		"tS": 0
 		},
-	"\/js\/style.scss": {
-		"aP": 1,
-		"bl": 0,
-		"dP": 10,
-		"dS": 0,
-		"ft": 4,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/style.css",
-		"oF": 2,
-		"oS": 3,
-		"uL": 1
+	"\/library\/custom-fields.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/library\/custom-fields.php",
+		"oF": 0
+		},
+	"\/library\/farmtofork.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/library\/farmtofork.php",
+		"oF": 0
 		},
 	"\/newsletter-thankyou.php": {
 		"ft": 8192,
@@ -1582,6 +1561,18 @@
 		"oAP": "\/page.php",
 		"oF": 0
 		},
+	"\/partials\/components\/component--home-events.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/partials\/components\/component--home-events.php",
+		"oF": 0
+		},
+	"\/partials\/components\/component--home-upcoming.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/partials\/components\/component--home-upcoming.php",
+		"oF": 0
+		},
 	"\/partials\/page-footer.php": {
 		"ft": 8192,
 		"oA": 2,
@@ -1616,6 +1607,71 @@
 		"opt": 0,
 		"oT": 2,
 		"q": 100
+		},
+	"\/scss\/block--singe--event.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "\/css\/block--singe--event.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
+	"\/scss\/color.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "\/css\/color.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
+	"\/scss\/grid.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "\/css\/grid.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
+	"\/scss\/style.scss": {
+		"aP": 1,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "\/style.css",
+		"oF": 2,
+		"oS": 3,
+		"uL": 1
+		},
+	"\/scss\/variables.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "\/css\/variables.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
 		},
 	"\/search.php": {
 		"ft": 8192,

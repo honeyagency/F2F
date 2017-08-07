@@ -304,7 +304,7 @@ add_filter( 'query_vars', 'add_query_vars_filter' );
 add_theme_support( 'post-thumbnails' );
 
 
-function get_excerpt_by_id($post_id, $class, $nolink, $length){
+function get_excerpt_by_id($post_id, $class, $nolink, $length = null){
     $the_post = get_post($post_id); //Gets post ID
 	
 	if(!$the_excerpt = $the_post->post_excerpt) {
@@ -317,7 +317,7 @@ function get_excerpt_by_id($post_id, $class, $nolink, $length){
 			$the_excerpt = $the_post->post_content; //Gets post_content to be used as a basis for the excerpt
 		}
 		
-		if($length) {
+		if($length != null) {
 			$excerpt_length = $length;
 		} else {
 			$excerpt_length = 20; //Sets excerpt length by word count
@@ -678,4 +678,9 @@ class Razorback_Walker_Page_Selective_Children extends Walker_Page {
     }
 }
 
+
+
+require_once 'library/farmtofork.php';
+
+// require_once 'library/custom-fields.php';
 ?>
