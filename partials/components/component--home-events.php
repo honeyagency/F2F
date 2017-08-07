@@ -22,7 +22,7 @@ function homepageEvents()
             'name'           => get_the_title($post->ID),
             'date'           => $date,
             'permalink'      => get_permalink($post->ID),
-            'description'    => get_excerpt_by_id($post->ID, '', 'nolink', 50),
+            'description'    => get_excerpt_by_id($post->ID, '', 'nolink', 30),
             'homepage_image' => $homepage_image,
             'eventTicketUrl' => get_field('eventTicketUrl', $post->ID),
         );
@@ -33,21 +33,28 @@ function homepageEvents()
 }
 $homeEvents = homepageEvents();
 ?>
-<section class="container">
+<section class="container clear">
 
 <div class="row">
 
-
-<?php
-foreach ($homeEvents as $event) {
-    ?>
-<div class="col grid--sm-third grid-item block--singe--event" id="event-<?php echo $event['id']; ?>">
-	<img src="<?php echo $event['homepage_image']; ?>" width="" alt="<?php echo $event['name']; ?>">
-	<time class="color--gold"><?php $date = date_create($event['date']); echo date_format($date, "M d");?></time>
-	<h2 class="color--black"><?php echo $event['name']; ?></h2>
-	<?php echo $event['description']; ?>
-	<a href="<?php echo $event['permalink']; ?>">Read More</a> | <a href="<?php echo $event['eventTicketUrl']; ?>">Tickets</a>
+    <?php
+    foreach ($homeEvents as $event) {
+        ?>
+    <div class="col grid--sm-third grid-item block--singe--event" id="event-<?php echo $event['id']; ?>">
+    	<img src="<?php echo $event['homepage_image']; ?>" width="" alt="<?php echo $event['name']; ?>">
+    	<time class="color--gold"><?php $date = date_create($event['date']); echo date_format($date, "M d");?></time>
+    	<h2 class="color--black"><?php echo $event['name']; ?></h2>
+    	<?php echo $event['description']; ?>
+    	<a href="<?php echo $event['permalink']; ?>">Read More</a> | <a href="<?php echo $event['eventTicketUrl']; ?>">Tickets</a>
+    </div>
+    <?php
+    }?>
+    <div class="grid--one nog clear">
+    <a href="/events/" class="btn-default">View All Events</a>
+    </div>
+    <br><br><br>
 </div>
-<?php
-}?>
-</div></section>
+
+</section>
+
+<br>
