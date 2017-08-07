@@ -45,7 +45,12 @@ $homeEvents = homepageEvents();
     	<time class="color--gold"><?php $date = date_create($event['date']); echo date_format($date, "M d");?></time>
     	<h2 class="color--black"><?php echo $event['name']; ?></h2>
     	<?php echo $event['description']; ?>
-    	<a href="<?php echo $event['permalink']; ?>">Read More</a> | <a href="<?php echo $event['eventTicketUrl']; ?>">Tickets</a>
+    	<a href="<?php echo $event['permalink']; ?>">Read More</a>
+<?php 
+if ($event['eventTicketUrl'] != null) {
+    echo ' | <a href="' . $event['eventTicketUrl'] . '">Tickets</a>';
+}?>
+        
     </div>
     <?php
     }?>
