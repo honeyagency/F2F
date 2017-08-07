@@ -1,6 +1,4 @@
-$phone: 500px;
-$tablet: 768px;
-$desk: 1130px;
+@import "variables";
 
 /* ---------------------------------------------------------
    1. Embedded fonts styles
@@ -84,10 +82,13 @@ html {
 
 body {
     margin: 0;
-    color: #555;
+    color: $black;
     background: #fff;
-    font: 12px/1.25 "fira-sans", sans-serif;
+    font-size: 12px;
+    font-family: "fira-sans", sans-serif;
     min-width: 320px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
     -webkit-text-size-adjust: 100%;
     -ms-text-size-adjust: none;
 }
@@ -7527,3 +7528,6 @@ body > .jcf-select-drop.jcf-drop-flipped {
 //         }
 //     }
 // }
+@import "color";
+@import "grid";
+@import "block--singe--event";

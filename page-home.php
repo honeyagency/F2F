@@ -3,36 +3,6 @@
 Template Name: Home
  */
 
-
-function homepageEvents()
-{
-    $posts = get_field('field_558b168a98f48');
-    foreach ($posts as $post) {
-        setup_postdata($post);
-        if (get_field('homepage_image')) {
-
-            $homepage_image = get_field('homepage_image');
-            $homepage_image = new TimberImage($homepage_image);
-        } else {
-            $thumb_id       = get_post_thumbnail_id(get_the_id());
-            $homepage_image = new TimberImage($thumb_id);
-        }
-        $upcoming_events[] = array(
-            'id'             => get_the_id(),
-            'name'           => get_the_title(),
-            'date'           => get_field('date'),
-            'permalink'      => get_permalink(),
-            'description'    => get_excerpt_by_id(get_the_id(), '', 'nolink'),
-            'homepage_image' => $homepage_image,
-            'eventTicketUrl' => get_field('eventTicketUrl'),
-        );
-    }
-
-    return $upcoming_events;
-    wp_reset_postdata();
-}
-
-
 ?>
 
 <?php get_header();?>
@@ -41,7 +11,7 @@ function homepageEvents()
 	<!-- main container of all the page elements -->
 	<div id="wrapper">
 		<!-- header of the page -->
-<?php 
+<?php
 
 get_template_part('partials/page-header');
 $header_images = get_field('header_images');
@@ -49,7 +19,6 @@ $header_images = get_field('header_images');
 $userid      = "1372446873";
 $clientid    = '34499fdd7c6c482e87af3657cbd67290';
 $accessToken = "1372446873.3a81a9f.b59adfa66bae4a428c7214afc8b7567e";
-$home = homepageEvents();
 
 // Gets our data
 function fetchData($url)
@@ -63,8 +32,6 @@ function fetchData($url)
     return $result;
 }
 
-
-
 // Pulls and parses data.
 $result = fetchData("https://api.instagram.com/v1/users/{$userid}/media/recent/?access_token={$accessToken}&count=8");
 //$result = fetchData("https://api.instagram.com/v1/users/{$userid}/media/recent/?client_id={$clientid}&count=8");
@@ -72,21 +39,21 @@ $result = objectToArray(json_decode($result));
 
 foreach ($result['data'] as &$data) {
 
-    $width  = $data['images']['low_resolution']['width'];
+    $width = $data['images']['low_resolution']['width'];
 
     $height = $data['images']['low_resolution']['height'];
 
-    $ratio  = $width / $height;
+    $ratio = $width / $height;
     // print_r($ratio);
-	$newArray = array();
+    $newArray = array();
     if ($ratio < 1) {
         $newArray = 'tall';
     } else {
         $newArray = 'wide';
     }
-	$data['aspect'] = $newArray;
+    $data['aspect'] = $newArray;
 }
-// print_r($result);
+
 ?>
 
 		<div class="visual-block">
@@ -183,7 +150,7 @@ foreach ($result['data'] as &$data) {
 		<!-- slideshow -->
 
 			</ul>
-			
+
 
 
         <?php if ($upcoming_events_intro = get_field('upcoming_events_intro')): ?>
@@ -196,66 +163,10 @@ echo $upcoming_events_intro;
         <?php
 endif;
 ?>
-		<div class="slideshow container">
-			<div class="pagination-box">
-				<h2>UPCOMING EVENTS</h2>
-				<div class="pagination-holder">
-					<div class="pagination">
-						<ul>
-                        <?php foreach ($upcoming_events as $event) {?>
-							<li>
-                            <?php if ($event['date']): $date = DateTime::createFromFormat('Ymd', $event['date']);endif;?>
-								<a href="<?php echo $event['permalink']; ?>">
-									<?php if ($event['date']): ?><time datetime="<?php echo $date->format('Y-m-d'); ?>"><?php echo $date->format('M d'); ?></time><?php endif;?>
-									<strong><?php echo $event['name']; ?></strong>
-								</a>
-							</li>
-                        <?php }?>
-						</ul>
-					</div>
-					<a href="/events/" class="more-events">More Events</a>
-				</div>
-			</div>
-			<div class="slide-holder">
-				<div class="slideset">
-                <?php foreach ($upcoming_events as $event) {
-    ?>
-					<section class="slide">
-						<div class="img-holder<?php if (!$homepage_image = $event['homepage_image']) {?> img-empty<?php }?>">
-                        <?php if ($homepage_image) {?>
-							<a href="<?php echo $event['permalink']; ?>">
-								<img src="<?php echo $homepage_image; ?>" width="686" alt="">
-							</a>
-                            <?php }
-    if ($event['date']):
-    ?>
-							<?php $date = DateTime::createFromFormat('Ymd', $event['date']);?>
-                            <div class="date">
-								<time datetime="<?php echo $date->format('Y-m-d'); ?>"><?php echo $date->format('M'); ?> <span><?php echo $date->format('d'); ?></span></time>
-							</div>
-                            <?php
-endif;
-    ?>
-						</div>
-						<div class="detail">
-							<h1><a href="<?php echo $event['permalink']; ?>"><?php echo $event['name']; ?></a></h1>
-							<?php $terms = get_the_terms($event['id'], 'event_categories');?>
-							<span class="sub-title"><?php echo $terms[key($terms)]->name; ?></span>
-							<p><?php echo $event['description']; ?></p>
-							<ul class="more-links">
-								<li><a href="<?php echo $event['permalink']; ?>" class="btn-default">Read More</a></li>
-                                <?php if ($event['eventTicketUrl']): ?>
-                                <li><a href="<?php echo $event['eventTicketUrl']; ?>" target="_blank" class="btn-default">Tickets</a></li>
-                                <?php endif;?>
-							</ul>
-						</div>
-					</section>
-                <?php }?>
-				</div>
-			</div>
-			<a class="btn-prev" href="#"><i class="icon-left-open"></i></a>
-			<a class="btn-next" href="#"><i class="icon-right-open"></i></a>
-		</div>
+<?php
+	get_template_part('partials/components/component--home-events');
+	// get_template_part('partials/components/component--home-upcoming');
+?>
 		<!-- article in the page -->
         <?php
 
@@ -269,33 +180,33 @@ if ($featured_blog_post):
 
     ?>
 
-			                <article class="article alignright">
-			                	<?php if (has_post_thumbnail(get_the_ID())) {?>
-			                    <div class="image">
-			                        <div class="img-holder">
-			                            <?php echo get_the_post_thumbnail(get_the_ID(), 'medium', array('alt' => '')); ?>
-			                        </div>
-			                    </div>
-			                    <?php }?>
+						                <article class="article alignright">
+						                	<?php if (has_post_thumbnail(get_the_ID())) {?>
+						                    <div class="image">
+						                        <div class="img-holder">
+						                            <?php echo get_the_post_thumbnail(get_the_ID(), 'medium', array('alt' => '')); ?>
+						                        </div>
+						                    </div>
+						                    <?php }?>
 
-			                    <!-- article detail -->
+						                    <!-- article detail -->
 
-			                    <div class="detail">
-			                        <div class="detail-holder">
-			                            <h2><a href="<?php the_permalink();?>"><?php the_title();?></a></h2>
-			                            <time datetime="<?php echo get_the_date('Y-m-d', get_the_ID()); ?>"><?php echo get_the_date('F j, Y', get_the_ID()); ?></time>
-			                            <p><?php echo get_excerpt_by_id(get_the_ID(), '', 1); ?></p>
-			                            <ul class="more-links">
-			                                <li><a href="<?php the_permalink();?>">Read More</a></li>
-			                                <li><a href="/dig-in-blog/">Dig In Blog</a></li>
-			                            </ul>
-			                        </div>
-			                    </div>
-			                </article>
+						                    <div class="detail">
+						                        <div class="detail-holder">
+						                            <h2><a href="<?php the_permalink();?>"><?php the_title();?></a></h2>
+						                            <time datetime="<?php echo get_the_date('Y-m-d', get_the_ID()); ?>"><?php echo get_the_date('F j, Y', get_the_ID()); ?></time>
+						                            <p><?php echo get_excerpt_by_id(get_the_ID(), '', 1); ?></p>
+						                            <ul class="more-links">
+						                                <li><a href="<?php the_permalink();?>">Read More</a></li>
+						                                <li><a href="/dig-in-blog/">Dig In Blog</a></li>
+						                            </ul>
+						                        </div>
+						                    </div>
+						                </article>
 
-							<?php wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the page works correctly ?>
+										<?php wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the page works correctly ?>
 
-					<?php endif;?>
+								<?php endif;?>
 
 		<!-- featured area -->
 		<section class="container featured-area">
@@ -312,19 +223,19 @@ if (have_rows('food_heroes')):
     // loop through the rows of data
     while (have_rows('food_heroes')): the_row();
         ?>
-													<div class="slide">
-													<div class="img-holder">
-						                            	<?php $hero_image = get_sub_field('image');?>
-						                                <?php if ($hero_url = get_sub_field('url')) {?>
-						                                <a href="<?php echo $hero_url; ?>" target="_blank">
-														<?php }?>
-						                                <img src="<?php echo $hero_image['url']; ?>" height="250" width="300" alt="<?php the_sub_field('name');?>">
-						                                <?php if ($hero_url = get_sub_field('url')) {?>
-						                                </a>
-														<?php }?>
-													</div>
-												</div>
-											<?php
+																			<div class="slide">
+																			<div class="img-holder">
+												                            	<?php $hero_image = get_sub_field('image');?>
+												                                <?php if ($hero_url = get_sub_field('url')) {?>
+												                                <a href="<?php echo $hero_url; ?>" target="_blank">
+																				<?php }?>
+												                                <img src="<?php echo $hero_image['url']; ?>" height="250" width="300" alt="<?php the_sub_field('name');?>">
+												                                <?php if ($hero_url = get_sub_field('url')) {?>
+												                                </a>
+																				<?php }?>
+																			</div>
+																		</div>
+																	<?php
     endwhile;
 
 endif;
@@ -353,21 +264,21 @@ if (have_rows('partners')):
     // loop through the rows of data
     while (have_rows('partners')): the_row();
         ?>
-														<div class="slide-holder">
-															<div class="logo-holder">
-																<div class="logo-frame">
-						                                        <?php $partner_logo = get_sub_field('logo');?>
-																<?php if ($partner_url = get_sub_field('url')) {?>
-						                                            <a href="<?php echo $partner_url; ?>" target="_blank">
-						                                        <?php }?>
-																		<img src="<?php echo $partner_logo['url']; ?>" alt="<?php the_sub_field('name');?>">
-																<?php if ($partner_url) {?>
-						                                            </a>
-						                                        <?php }?>
-																</div>
-															</div>
-														</div>
-												<?php
+																				<div class="slide-holder">
+																					<div class="logo-holder">
+																						<div class="logo-frame">
+												                                        <?php $partner_logo = get_sub_field('logo');?>
+																						<?php if ($partner_url = get_sub_field('url')) {?>
+												                                            <a href="<?php echo $partner_url; ?>" target="_blank">
+												                                        <?php }?>
+																								<img src="<?php echo $partner_logo['url']; ?>" alt="<?php the_sub_field('name');?>">
+																						<?php if ($partner_url) {?>
+												                                            </a>
+												                                        <?php }?>
+																						</div>
+																					</div>
+																				</div>
+																		<?php
 
         if ($count == 2) {
 

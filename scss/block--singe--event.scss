@@ -1,0 +1,25 @@
+.block--singe--event {
+    img {
+        width: 100%;
+    }
+
+    time {
+        display: block;
+        margin-bottom: .3em;
+    }
+
+    h2 {
+        margin-bottom: .5em;
+    }
+
+    p, time {
+        font-size: .9em;
+    }
+
+    margin-top: 1em;
+    padding-bottom: 1em;
+
+    @media only screen and (min-width: $phone) {
+        padding-bottom: 3em;
+    }
+}
