@@ -1501,6 +1501,15 @@
 		"sC": 1,
 		"tS": 0
 		},
+	"\/js\/min\/jquery.main-min.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/js\/min\/min\/jquery.main-min-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
 	"\/library\/custom-fields.php": {
 		"ft": 8192,
 		"oA": 2,
@@ -1637,6 +1646,19 @@
 		"ma": 0,
 		"oA": 1,
 		"oAP": "\/css\/grid.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
+	"\/scss\/section--home-header.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "\/css\/section--home-header.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1

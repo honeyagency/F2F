@@ -642,7 +642,7 @@ ol li:before {
 /* navigation styles */
 
 .nav-area {
-    padding: 17px 0 0;
+    padding: 19px 0 0;
     float: left;
 }
 
@@ -670,7 +670,7 @@ ol li:before {
     position: absolute;
     top: 9px;
     left: 0;
-    height: 5px;
+    height: 3px;
     width: 35px;
     -webkit-transition: all .25s linear;
     transition: all .25s linear;
@@ -7143,17 +7143,17 @@ body > .jcf-select-drop.jcf-drop-flipped {
 
 @media only screen and (max-width: 499px) {
     #wrapper {
-        padding-top: 90px;
+        padding-top: 60px;
     }
 
     #header {
-        height: 90px;
+        height: 60px;
     }
 
     #header.fixed-position .container,
     #header .container {
-        padding-top: 16px;
-        padding-bottom: 17px;
+        padding-top: 0;
+        padding-bottom: 0;
     }
 
     #header .dropdown .container {
@@ -7165,15 +7165,15 @@ body > .jcf-select-drop.jcf-drop-flipped {
     }
 
     .logo {
-        margin: -2px 0 0;
+        margin: 5px 0 0;
         float: right;
     }
 
     .logo a {
         background-image: url(images/logo-small.png);
         background-repeat: no-repeat;
-        width: 55px;
-        height: 58px;
+        width: 45px;
+        height: 48px;
         background-size: cover;
     }
 
@@ -7531,3 +7531,4 @@ body > .jcf-select-drop.jcf-drop-flipped {
 @import "color";
 @import "grid";
 @import "block--singe--event";
+@import "section--home-header";

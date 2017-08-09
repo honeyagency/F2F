@@ -56,7 +56,7 @@ foreach ($result['data'] as &$data) {
 
 ?>
 
-		<div class="visual-block">
+		<div class="visual-block section--home-header">
 			<!-- visual section in the page -->
 			<section class="visual">
             <?php if ($header_images) {?>
