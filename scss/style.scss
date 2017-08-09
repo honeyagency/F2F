@@ -1718,6 +1718,10 @@ ol li:before {
 .partners-slider .logo-holder .logo-frame {
     display: table-cell;
     vertical-align: middle;
+
+    img {
+        max-width: 150px;
+    }
 }
 
 .btn-prev,
