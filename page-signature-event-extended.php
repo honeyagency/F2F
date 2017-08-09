@@ -245,7 +245,7 @@ Template Name: Signature Event (extended)
                                             <a href="<?php echo $sponsor_url;?>" target="_blank">
                                         <?php }?>
                                         <?php if($sponsor_logo) {?>
-												<img src="<?php echo $sponsor_logo['url'];?>" alt="<?php echo $sponsor['sponsor_name'];?>">
+												<img width="150"> src="<?php echo $sponsor_logo['url'];?>" alt="<?php echo $sponsor['sponsor_name'];?>">
                                         <?php } else { ?>
                                         		<?php echo $sponsor['sponsor_name'];?>
                                         <?php } ?>

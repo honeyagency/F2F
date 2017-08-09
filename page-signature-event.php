@@ -201,7 +201,7 @@ Template Name: Signature Event
                                         <a href="<?php echo $sponsor_url;?>" target="_blank">
                                     <?php }?>
                                     <?php if($sponsor_logo) {?>
-                                            <img src="<?php echo $sponsor_logo['url'];?>" alt="<?php echo get_sub_field('sponsor_name');?>">
+                                            <img width="150"> src="<?php echo $sponsor_logo['url'];?>" alt="<?php echo get_sub_field('sponsor_name');?>">
                                     <?php } else { ?>
                                             <?php echo get_sub_field('sponsor_name');?>
                                     <?php } ?>
