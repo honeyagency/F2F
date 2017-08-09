@@ -160,10 +160,10 @@
 			<!-- copyright area -->
 			<div class="container copyright">
 				<div class="holder">
-					<p>Copyright &copy; <?php echo date("Y"); ?> <a href="http://www.visitsacramento.com/" target="_blank">Sacramento Convention &amp; Visitors Bureau</a></p>
+					<p>Copyright &copy; <?php echo date("Y"); ?> <a href="http://www.visitsacramento.com/" target="_blank">Visit Sacramento</a></p>
 					<ul class="policy-list">
 						<li><a href="/privacy-policy/">Privacy Policy</a></li>
-						<li>Website by <a href="http://honeyagency.com/" target="_blank">Honey Agency</a> &amp; <a href="http://positioninteractive.com/" target="_blank">Position Interactive</a></li>
+						<li>Website by <a href="https://honeyagency.com/" target="_blank">Honey Agency</a> &amp; <a href="http://positioninteractive.com/" target="_blank">Position Interactive</a></li>
 					</ul>
 				</div>
 			</div>
