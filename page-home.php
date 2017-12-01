@@ -18,7 +18,7 @@ $header_images = get_field('header_images');
 // Supply a user id and an access token
 $userid      = "1372446873";
 $clientid    = '34499fdd7c6c482e87af3657cbd67290';
-$accessToken = "1372446873.3a81a9f.b59adfa66bae4a428c7214afc8b7567e";
+$accessToken = "27486739.3a81a9f.5dc5c80a659e488bb032d8ddc08f917e";
 
 // Gets our data
 function fetchData($url)
