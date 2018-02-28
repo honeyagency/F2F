@@ -21,4 +21,4 @@ function objectToArray($d)
     }
 }
 
-add_image_size( 'home_event_image', 600, 320, true);
+add_image_size('home_event_image', 600, 320, true);
