@@ -16,28 +16,30 @@ Template Name: Home
 get_template_part('partials/page-header');
 $header_images = get_field('header_images');
 // Supply a user id and an access token
-$userid      = "1372446873";
-$clientid    = '34499fdd7c6c482e87af3657cbd67290';
-$accessToken = "27486739.3a81a9f.5dc5c80a659e488bb032d8ddc08f917e";
+// $userid      = "1372446873";
+// $clientid    = '34499fdd7c6c482e87af3657cbd67290';
+// $accessToken = "27486739.3a81a9f.5dc5c80a659e488bb032d8ddc08f917e";
 
-// Gets our data
-function fetchData($url)
-{
-    $ch = curl_init();
-    curl_setopt($ch, CURLOPT_URL, $url);
-    curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-    curl_setopt($ch, CURLOPT_TIMEOUT, 20);
-    $result = curl_exec($ch);
-    curl_close($ch);
-    return $result;
-}
+// // Gets our data
+// function fetchData($url)
+// {
+//     $ch = curl_init();
+//     curl_setopt($ch, CURLOPT_URL, $url);
+//     curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+//     curl_setopt($ch, CURLOPT_TIMEOUT, 20);
+//     $result = curl_exec($ch);
+//     curl_close($ch);
+//     return $result;
+// }
 
-// Pulls and parses data.
-$result = fetchData("https://api.instagram.com/v1/users/{$userid}/media/recent/?access_token={$accessToken}&count=8");
-//$result = fetchData("https://api.instagram.com/v1/users/{$userid}/media/recent/?client_id={$clientid}&count=8");
-$result = objectToArray(json_decode($result));
+// // Pulls and parses data.
+// $result = fetchData("https://api.instagram.com/v1/users/{$userid}/media/recent/?access_token={$accessToken}&count=8");
+// //$result = fetchData("https://api.instagram.com/v1/users/{$userid}/media/recent/?client_id={$clientid}&count=8");
+// $result = objectToArray(json_decode($result));
 
-foreach ($result['data'] as &$data) {
+// print_r($instagramCachedResults);
+
+foreach ($instagramCachedResults as &$data) {
 
     $width = $data['images']['low_resolution']['width'];
 
@@ -67,21 +69,21 @@ foreach ($result['data'] as &$data) {
 						</div>
 					</div>
 					<div class="image-holder two">
-						<div class="image <?php echo $result['data'][0]['aspect']; ?>">
-							<img src="<?php echo $result['data'][0]['images']['standard_resolution']['url']; ?>" height="172" width="170" alt="">
+						<div class="image <?php echo $instagramCachedResults[0]['aspect']; ?>">
+							<img src="<?php echo $instagramCachedResults[0]['images']['standard_resolution']['url']; ?>" height="172" width="170" alt="">
 						</div>
-						<div class="image <?php echo $result['data'][1]['aspect']; ?>">
-							<img src="<?php echo $result['data'][1]['images']['standard_resolution']['url']; ?>" height="171" width="170" alt="">
+						<div class="image <?php echo $instagramCachedResults[1]['aspect']; ?>">
+							<img src="<?php echo $instagramCachedResults[1]['images']['standard_resolution']['url']; ?>" height="171" width="170" alt="">
 						</div>
 					</div>
 					<div class="image-holder one">
-						<div class="image <?php echo $result['data'][2]['aspect']; ?>">
-							<img src="<?php echo $result['data'][2]['images']['standard_resolution']['url']; ?>" height="343" width="344" alt="">
+						<div class="image <?php echo $instagramCachedResults[2]['aspect']; ?>">
+							<img src="<?php echo $instagramCachedResults[2]['images']['standard_resolution']['url']; ?>" height="343" width="344" alt="">
 						</div>
 					</div>
 					<div class="image-holder one tablet">
-						<div class="image <?php echo $result['data'][3]['aspect']; ?>">
-							<img src="<?php echo $result['data'][3]['images']['standard_resolution']['url']; ?>" height="343" width="343" alt="">
+						<div class="image <?php echo $instagramCachedResults[3]['aspect']; ?>">
+							<img src="<?php echo $instagramCachedResults[3]['images']['standard_resolution']['url']; ?>" height="343" width="343" alt="">
 						</div>
 					</div>
 				<!-- 	<div class="image-holder two mobile">
@@ -101,21 +103,21 @@ foreach ($result['data'] as &$data) {
 						</div>
 					</div> -->
 				<!-- 	<div class="image-holder one tablet">
-						<div class="image <?php echo $result['data'][4]['aspect']; ?>">
-							<img src="<?php echo $result['data'][4]['images']['standard_resolution']['url']; ?>" height="343" width="344" alt="">
+						<div class="image <?php echo $instagramCachedResults[4]['aspect']; ?>">
+							<img src="<?php echo $instagramCachedResults[4]['images']['standard_resolution']['url']; ?>" height="343" width="344" alt="">
 						</div>
 					</div>
 					<div class="image-holder one">
-						<div class="image <?php echo $result['data'][5]['aspect']; ?>">
-							<img src="<?php echo $result['data'][5]['images']['standard_resolution']['url']; ?>" height="343" width="342" alt="">
+						<div class="image <?php echo $instagramCachedResults[5]['aspect']; ?>">
+							<img src="<?php echo $instagramCachedResults[5]['images']['standard_resolution']['url']; ?>" height="343" width="342" alt="">
 						</div>
 					</div>
 					<div class="image-holder two">
-						<div class="image <?php echo $result['data'][6]['aspect']; ?>">
-							<img src="<?php echo $result['data'][6]['images']['standard_resolution']['url']; ?>" height="171" width="171" alt="">
+						<div class="image <?php echo $instagramCachedResults[6]['aspect']; ?>">
+							<img src="<?php echo $instagramCachedResults[6]['images']['standard_resolution']['url']; ?>" height="171" width="171" alt="">
 						</div>
-						<div class="image <?php echo $result['data'][7]['aspect']; ?>">
-							<img src="<?php echo $result['data'][7]['images']['standard_resolution']['url']; ?>" height="172" width="171" alt="">
+						<div class="image <?php echo $instagramCachedResults[7]['aspect']; ?>">
+							<img src="<?php echo $instagramCachedResults[7]['images']['standard_resolution']['url']; ?>" height="172" width="171" alt="">
 						</div>
 					</div> -->
 				</div>

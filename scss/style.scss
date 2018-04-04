@@ -637,6 +637,19 @@ ol li:before {
             &.tall {}
         }
     }
+
+    &.two {
+        .image {
+            &.wide {
+                img {
+                    height: 100%;
+                    min-width: 100%;
+                    max-width: none;
+                    width: auto;
+                }
+            }
+        }
+    }
 }
 
 /* navigation styles */
@@ -1069,9 +1082,11 @@ ol li:before {
 }
 
 .visual .images-block img {
-    display: block;
-    width: 100%;
-    height: auto;
+    max-width: none;
+    width: 110%;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 .visual .image-holder {
