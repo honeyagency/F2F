@@ -39,118 +39,27 @@ $header_images = get_field('header_images');
 
 // print_r($instagramCachedResults);
 
-foreach ($instagramCachedResults as &$data) {
+// foreach ($instagramCachedResults as &$data) {
 
-    $width = $data['images']['low_resolution']['width'];
+//     $width = $data['images']['low_resolution']['width'];
 
-    $height = $data['images']['low_resolution']['height'];
+//     $height = $data['images']['low_resolution']['height'];
 
-    $ratio = $width / $height;
-    // print_r($ratio);
-    $newArray = array();
-    if ($ratio < 1) {
-        $newArray = 'tall';
-    } else {
-        $newArray = 'wide';
-    }
-    $data['aspect'] = $newArray;
-}
+//     $ratio = $width / $height;
+//     // print_r($ratio);
+//     $newArray = array();
+//     if ($ratio < 1) {
+//         $newArray = 'tall';
+//     } else {
+//         $newArray = 'wide';
+//     }
+//     $data['aspect'] = $newArray;
+// }
 
 ?>
 
-		<div class="visual-block section--home-header">
-			<!-- visual section in the page -->
-			<section class="visual">
-            <?php if ($header_images) {?>
-				<div class="images-block">
-					<div class="image-holder mobile">
-						<div class="image">
-							<img src="<?php echo $header_images[0]['url']; ?>" height="343" width="343" alt="">
-						</div>
-					</div>
-					<div class="image-holder two">
-						<div class="image <?php echo $instagramCachedResults[0]['aspect']; ?>">
-							<img src="<?php echo $instagramCachedResults[0]['images']['standard_resolution']['url']; ?>" height="172" width="170" alt="">
-						</div>
-						<div class="image <?php echo $instagramCachedResults[1]['aspect']; ?>">
-							<img src="<?php echo $instagramCachedResults[1]['images']['standard_resolution']['url']; ?>" height="171" width="170" alt="">
-						</div>
-					</div>
-					<div class="image-holder one">
-						<div class="image <?php echo $instagramCachedResults[2]['aspect']; ?>">
-							<img src="<?php echo $instagramCachedResults[2]['images']['standard_resolution']['url']; ?>" height="343" width="344" alt="">
-						</div>
-					</div>
-					<div class="image-holder one tablet">
-						<div class="image <?php echo $instagramCachedResults[3]['aspect']; ?>">
-							<img src="<?php echo $instagramCachedResults[3]['images']['standard_resolution']['url']; ?>" height="343" width="343" alt="">
-						</div>
-					</div>
-				<!-- 	<div class="image-holder two mobile">
-						<div class="image remove">
-							<img src="<?php echo $header_images[1]['url']; ?>" height="172" width="171" alt="">
-						</div>
-						<div class="image">
-							<img src="<?php echo $header_images[2]['url']; ?>" height="171" width="171" alt="">
-						</div>
-					</div>
-					<div class="image-holder two mobile inline">
-						<div class="image">
-							<img src="<?php echo $header_images[3]['url']; ?>" height="172" width="172" alt="">
-						</div>
-						<div class="image">
-							<img src="<?php echo $header_images[4]['url']; ?>" height="171" width="172" alt="">
-						</div>
-					</div> -->
-				<!-- 	<div class="image-holder one tablet">
-						<div class="image <?php echo $instagramCachedResults[4]['aspect']; ?>">
-							<img src="<?php echo $instagramCachedResults[4]['images']['standard_resolution']['url']; ?>" height="343" width="344" alt="">
-						</div>
-					</div>
-					<div class="image-holder one">
-						<div class="image <?php echo $instagramCachedResults[5]['aspect']; ?>">
-							<img src="<?php echo $instagramCachedResults[5]['images']['standard_resolution']['url']; ?>" height="343" width="342" alt="">
-						</div>
-					</div>
-					<div class="image-holder two">
-						<div class="image <?php echo $instagramCachedResults[6]['aspect']; ?>">
-							<img src="<?php echo $instagramCachedResults[6]['images']['standard_resolution']['url']; ?>" height="171" width="171" alt="">
-						</div>
-						<div class="image <?php echo $instagramCachedResults[7]['aspect']; ?>">
-							<img src="<?php echo $instagramCachedResults[7]['images']['standard_resolution']['url']; ?>" height="172" width="171" alt="">
-						</div>
-					</div> -->
-				</div>
-            <?php }?>
-				<!-- visual caption -->
-		<!-- 		<div class="caption">
-					<div class="caption-holder">
-						<div class="container">
-							<div class="caption-box">
-								<div class="box-holder">
-                                	<strong class="title">Find a Farm-to-Fork event near you!</strong>
-									<a href="#events" class="more">Check out the events</a>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div> -->
-			</section>
-            <?php if ($teaser_text = get_field('teaser_text')) {?>
-			<div class="popup">
-				<div class="container">
-					<a href="#" class="close"><i class="icon-cancel"></i></a>
-					<div class="popup-content">
-						<p><?php echo $teaser_text; ?> <a href="<?php the_field('teaser_url');?>" class="more"<?php if (get_field('open_in_new_window') == 'yes') {?> target="_blank"<?php }?>>Read more </a></p>
-					</div>
-				</div>
-			</div>
-            <?php }?>
-		</div>
-		<!-- slideshow -->
-
-			</ul>
-
+		<img src="<?php echo the_post_thumbnail_url(); ?>">
+<br><br>
 
 
         <?php if ($upcoming_events_intro = get_field('upcoming_events_intro')): ?>

@@ -20,6 +20,6 @@ function objectToArray($d)
         return $d;
     }
 }
-require_once 'instagram.php';
+// require_once 'instagram.php';
 
 add_image_size('home_event_image', 600, 320, true);
