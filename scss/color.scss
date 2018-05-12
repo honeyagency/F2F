@@ -1,9 +1,28 @@
+.bg--gold {
+    background-color: $gold;
+}
+
+.bg--white {
+    background-color: $white;
+}
+
+.bg--black {
+    background-color: $black;
+}
+
 .color--gold {
     color: $gold;
 }
 
-.color--white {}
+.color--white {
+    color: $white;
+}
 
 .color--black {
-	color: $black;
+    color: $black;
+}
+
+.hrgray {
+    border: 0;
+    border-bottom: 1px solid #C4C4C4;
 }

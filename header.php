@@ -8,6 +8,9 @@
 	<title><?php wp_title(); ?></title>
 	<!-- include the site stylesheet -->
 	<link media="all" rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>">
+    <script>
+!function(e,t,n,a,c,l,m,o,d,f,h,i){c[l]&&(d=e.createElement(t),d[n]=c[l],e[a]("head")[0].appendChild(d),e.documentElement.className+=" wf-cached"),function s(){for(d=e[a](t),f="",h=0;h<d.length;h++)i=d[h][n],i.match(m)&&(f+=i);f&&(c[l]="/**/"+f),setTimeout(s,o+=o)}()}(document,"style","innerHTML","getElementsByTagName",localStorage,"tk",/^@font|^\.tk-/,100);
+</script>
 	<script src="https://use.typekit.net/gqm8vmg.js"></script>
     <script>try{Typekit.load({ async: true });}catch(e){}</script>
     

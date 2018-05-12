@@ -139,78 +139,10 @@
 									</div>
                                     <?php
 
-									// check if page has quick links
-									if( have_rows('quick_links') ) {
-									
-									?>
-                                    <div class="col-holder">
-										<h3>QUICK LINKS</h3>
-										<ul class="quick-search">
-                                    <?php
-										// loop through the rows of data
-										while ( have_rows('quick_links') ) : the_row();
-									
-										if(get_sub_field('internal_or_external') == 'internal') {
-											
-											$link = get_sub_field('page_link');
-											$target = '';
-											
-										} elseif(get_sub_field('internal_or_external') == 'external') {
-										
-											$link = get_sub_field('url');
-											$target = ' target="_blank"';
-										}
-									
-									?>
-											<li><a href="<?php echo $link;?>"<?php echo $target;?>><?php the_sub_field('title');?></a></li>									
-									<?php
-										endwhile;
-									?>
-									
-                                    	</ul>
-                                   	</div>
-                                    
-                                    <?php } else { // if page doesn't have quick links ?>
-                                    
-												<?php
-            
-                                                // check if homepage has quick links
-                                                if( have_rows('quick_links', 82) ) {
-                                                
-                                                ?>
-                                                <div class="col-holder">
-                                                    <h3>QUICK LINKS</h3>
-                                                    <ul class="quick-search">
-                                                <?php
-                                                    // loop through the rows of data
-                                                    while ( have_rows('quick_links', 82) ) : the_row();
-                                                
-                                                    if(get_sub_field('internal_or_external') == 'internal') {
-                                                        
-                                                        $link = get_sub_field('page_link');
-                                                        $target = '';
-                                                        
-                                                    } elseif(get_sub_field('internal_or_external') == 'external') {
-                                                    
-                                                        $link = get_sub_field('url');
-                                                        $target = ' target="_blank"';
-                                                    }
-                                                
-                                                ?>
-                                                        <li><a href="<?php echo $link;?>"<?php echo $target;?>><?php the_sub_field('title');?></a></li>									
-                                                <?php
-                                                    endwhile;
-                                                ?>
-                                                
-                                                    </ul>
-                                                </div>
-                                                
-                                                <?php
-                                                
-                                                }
-										}
-									
-									?>
+                                    $context['quicklinks'] = prepareQuickLinks();
+                                    Timber::render('components/sections/section--quick-links.twig', $context);
+
+                                    ?>
 									<div class="col-holder">
 										<ul class="socials-list">
 											<li>

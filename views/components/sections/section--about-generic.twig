@@ -1,0 +1,25 @@
+<section class="section--about-generic flex flex--wrap justify--between align--items-baseline spacing--gutter spacing--vert-1 spacing--dsk-vert-4">
+	<div class="grid--one grid--sm-half grid--lg-third">
+		<strong class="text--uppercase font--small letter--2 margin--bot-3 margin--mob-bot-1 displayblock">{{home.about.title}}</strong>
+		<div class="hometitle font--serif font--bold margin--bot-1">{{home.about.content}}</div>
+		<a href="{{home.about.link.url}}" target="{{home.about.link.target}}" class="text--uppercase font--tiny inline-flex flex--wrap align--items-center font--bold letter--1" title="{{home.about.link.title}}"><img src="{{assets}}/images/icon-wheat.png" width="45">  <span style="margin-left:.5em;">{{home.about.link.title}}</span></a>
+	</div>
+	<div class="grid--one grid--sm-half grid--lg-fourth margin--mob-top-2">
+		<strong class="text--uppercase font--small letter--2 margin--bot-3 margin--mob-bot-0 displayblock">{{home.events.title}}</strong>
+		
+		{% for event in home.events.events %}
+			<hr class="hrgray">
+			<div class="piece--event spacing--vert-half"><strong class="letter--1 table margin--right-half font--small">{{event.date|date('M. d')}}</strong><a href="{{event.link}}">{{event.title}}</a></div>
+		{% endfor %}
+		<hr class="hrgray">
+	</div>
+	<div class="grid--one grid--sm-half grid--lg-fourth margin--mob-top-1">
+		<strong class="text--uppercase font--small letter--2 margin--bot-3 displayblock hidden--mob">&nbsp;</strong>
+		<hr class="hrgray hidden--mob">
+		<div class="flex flex--wrap justify--between align--items-center">
+			<a class="button" href="{{home.events.link.url}}" target="{{home.events.link.target}}" title="{{home.events.link.title}}">{{home.events.link.title}}</a>
+			<span class="color--gray font--tiny text--uppercase letter--2 font--bold">{{home.events.by}}</span>
+		</div>
+	</div>
+
+</section>

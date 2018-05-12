@@ -1,0 +1,15 @@
+{% extends "base.twig" %}
+{% block header %}
+		{% include 'components/sections/section--home-navigation.twig' %}
+	{% endblock %}
+{% block content %}
+	
+	{% if home.layout.layout == 'generic' %}
+		{% include 'components/sections/section--header-generic.twig' %}
+		{% include 'components/sections/section--about-generic.twig' %}
+	{% else %}
+		{% include 'components/sections/section--header-featured.twig' %}
+	{% endif %}
+	{% include 'components/sections/section--home-news.twig' %}
+	{% include 'components/sections/section--sponsors.twig' %}
+{% endblock %}

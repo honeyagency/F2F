@@ -1,0 +1,18 @@
+<header class="section--home-header flex flex--wrap justify--between spacing--gutter" id="">
+
+		
+		<!-- logo of the page -->
+		<h1 class="logo-home">
+		<a href="/">America's farm-to-fork capital sacramento, ca</a>
+		</h1>
+		<!-- main navigation in the page -->
+		<nav class="section--home-navigation grid--one grid--sm-two-fifths">
+			<ul class="flex flex--wrap justify--between align--items-center">
+				{% for item in home.navigation %}
+					<li><a class="font--serif font--large color--black font--bold" href="{{item.url}}" title="{{item.title}}">{{item.title}}</a></li>
+					{% if loop.last  %}{% else %}<span class="border"></span>{% endif %}
+				{% endfor %}
+			</ul>
+		</nav>
+
+</header>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- set the encoding of your site -->
+        <meta charset="{{site.charset}}" />
+        <title>
+        {% if wp_title %}
+            {{ wp_title }} - {{ site.name }}
+        {% else %}
+            {{ site.name }}
+        {% endif %}
+        </title>
+        <!-- set the viewport width and initial-scale on mobile devices -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- include the site stylesheet -->
+        <link rel="stylesheet" href="{{function('bloginfo','stylesheet_url')}}" type="text/css" media="screen" />
+        <script>
+        !function(e,t,n,a,c,l,m,o,d,f,h,i){c[l]&&(d=e.createElement(t),d[n]=c[l],e[a]("head")[0].appendChild(d),e.documentElement.className+=" wf-cached"),function s(){for(d=e[a](t),f="",h=0;h<d.length;h++)i=d[h][n],i.match(m)&&(f+=i);f&&(c[l]="/**/"+f),setTimeout(s,o+=o)}()}(document,"style","innerHTML","getElementsByTagName",localStorage,"tk",/^@font|^\.tk-/,100);
+        </script>
+        <script src="https://use.typekit.net/gqm8vmg.js"></script>
+        <script>try{Typekit.load({ async: true });}catch(e){}</script>
+        
+        {% include 'components/favicon.twig' %}
+        <!-- Google Tag Manager -->
+        <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-57MGXXM');</script>
+        <!-- End Google Tag Manager -->
+        {{function('wp_head')}}
+    </head>

@@ -1,3 +1,6 @@
+@import "_07-vendors/bourbon/bourbon";
+@import "_07-vendors/neat/neat";
+
 @import "variables";
 
 /* ---------------------------------------------------------
@@ -85,7 +88,7 @@ body {
     color: $black;
     background: #fff;
     font-size: 12px;
-    font-family: "fira-sans", sans-serif;
+    font-family: $base-sans-font;
     min-width: 320px;
     line-height: 1.6;
     -webkit-font-smoothing: antialiased;
@@ -149,7 +152,7 @@ a:focus {
 input,
 textarea,
 select {
-    font: 100% "fira-sans", sans-serif;
+    font: 100% $base-sans-font;
     color: #000;
     vertical-align: middle;
 }
@@ -223,7 +226,7 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: "fira-sans", sans-serif;
+    font-family: $base-sans-font;
     line-height: 1.2em;
     margin: 0 0 1.2em;
 }
@@ -429,8 +432,8 @@ body.touch-device.nav-active {
     position: fixed;
 }
 
-h1 {
-    font-family: "orpheuspro", sans-serif;
+h1, .h1 {
+    font-family: $base-serif-font;
     font-weight: 700;
     font-size: 41px;
     font-size: 2.5625em;
@@ -439,20 +442,20 @@ h1 {
     margin: 0;
 }
 
-h2 {
+h2, .h2 {
     color: #bea46b;
-    font-family: "orpheuspro", sans-serif;
+    font-family: $base-serif-font;
     margin: 0;
 }
 
-h3 {
+h3, .h3 {
     font-size: 25px;
     font-size: 1.5625em;
     line-height: 1.2em;
     color: #959595;
     font-style: italic;
     font-weight: 400;
-    font-family: "orpheuspro", sans-serif;
+    font-family: $base-serif-font;
     margin: 0;
 }
 
@@ -474,7 +477,7 @@ ol li:before {
     position: absolute;
     left: 0;
     color: #a78e5a;
-    font-family: "orpheuspro", sans-serif;
+    font-family: $base-serif-font;
 }
 
 * html ol li .list-item-before {
@@ -500,6 +503,12 @@ ol li:before {
     padding-top: 110px;
     display: table;
     table-layout: fixed;
+}
+
+.home {
+    #wrapper {
+        padding: 0;
+    }
 }
 
 /* header styles */
@@ -570,6 +579,16 @@ ol li:before {
     background-size: 100%;
 }
 
+.logo-home a {
+    background: url(images/logo-home.png) no-repeat;
+    width: 140px;
+    height: 140px;
+    overflow: hidden;
+    text-indent: -9999px;
+    display: block;
+    background-size: 100%;
+}
+
 /* blog link styles */
 
 .blog-link {
@@ -579,7 +598,7 @@ ol li:before {
     z-index: 10;
     margin: 4px 0 0 0;
     font-size: 19px;
-    font-family: "orpheuspro", sans-serif;
+    font-family: $base-serif-font;
     line-height: 21px;
 }
 
@@ -667,7 +686,7 @@ ol li:before {
     min-width: 88px;
     z-index: 12;
     font-size: 20px;
-    font-family: "orpheuspro", sans-serif;
+    font-family: $base-serif-font;
     line-height: 22px;
 }
 
@@ -833,7 +852,7 @@ ol li:before {
     font-size: 16px;
     font-weight: 400;
     font-style: normal;
-    font-family: "fira-sans", sans-serif;
+    font-family: $base-sans-font;
     margin: 0 0 19px;
 }
 
@@ -1157,7 +1176,7 @@ ol li:before {
     color: #000;
     display: block;
     font-size: 20px;
-    font-family: "orpheuspro", sans-serif;
+    font-family: $base-serif-font;
     font-weight: 700;
     line-height: 22px;
 }
@@ -1309,7 +1328,7 @@ ol li:before {
     line-height: 20px;
     font-size: 16px;
     font-weight: normal;
-    font-family: "fira-sans", sans-serif;
+    font-family: $base-sans-font;
     color: #bea46b;
     margin: 0 0 53px;
     text-transform: uppercase;
@@ -1358,7 +1377,7 @@ ol li:before {
 .slideshow .pagination strong {
     font-size: 20px;
     font-weight: 400;
-    font-family: "orpheuspro", sans-serif;
+    font-family: $base-serif-font;
     line-height: 26px;
 }
 
@@ -1366,7 +1385,7 @@ ol li:before {
     display: block;
     font-size: 16px;
     font-style: italic;
-    font-family: "orpheuspro", sans-serif;
+    font-family: $base-serif-font;
     line-height: 26px;
 }
 
@@ -1403,7 +1422,7 @@ ol li:before {
 .date span {
     display: block;
     font-size: 41px;
-    font-family: "orpheuspro", sans-serif;
+    font-family: $base-serif-font;
     line-height: 43px;
 }
 
@@ -1557,7 +1576,7 @@ ol li:before {
 .article .search-market h2 {
     font-size: 41px;
     font-weight: 700;
-    font-family: "orpheuspro", sans-serif;
+    font-family: $base-serif-font;
     line-height: 47px;
     color: #000;
     margin: 0 0 28px;
@@ -1578,206 +1597,11 @@ ol li:before {
     min-width: inherit;
 }
 
-/* featured area styles */
-
-.featured-area {
-    padding-top: 102px;
-    padding-bottom: 126px;
-}
-
-.featured-box {
-    text-align: center;
-    width: 300px;
-    float: left;
-}
-
-.featured-box h2 {
-    color: #bea46b;
-    font-size: 41px;
-    font-weight: 400;
-    font-family: "kiln-sans", arial, sans-serif;
-    line-height: 43px;
-    margin: 0 0 14px;
-    text-transform: uppercase;
-}
-
-.featured-box h2 span {
-    font-size: 16px;
-    font-family: "fira-sans", sans-serif;
-    line-height: 18px;
-    display: block;
-}
-
-/* feature slideshow styles */
-
-.feature-slideshow {
-    position: relative;
-}
-
-.feature-slideshow .slideset {
-    position: relative;
-    margin: 0 0 20px;
-}
-
-.feature-slideshow .slide {
-    position: absolute;
-    left: 0;
-    top: 0;
-    z-index: 1;
-}
-
-.feature-slideshow .slide.active {
-    z-index: 2;
-}
-
-.feature-slideshow .img-holder {
-    overflow: hidden;
-}
-
-.feature-slideshow .img-holder img {
-    display: block;
-    width: 100%;
-    height: auto;
-}
-
-.feature-slideshow .pagination {
-    width: 100%;
-}
-
-.feature-slideshow .pagination ul {
-    letter-spacing: -4px;
-}
-
-.feature-slideshow .pagination ul li {
-    display: inline-block;
-    vertical-align: top;
-    letter-spacing: 0;
-    margin: 0 8px;
-}
-
-.feature-slideshow .pagination ul li a {
-    width: 10px;
-    height: 10px;
-    overflow: hidden;
-    text-indent: -9999px;
-    display: block;
-    background: #e1e1e1;
-    border-radius: 100%;
-}
-
-.feature-slideshow .pagination ul li a:hover {
-    background: #bea46b;
-}
-
-.feature-slideshow .pagination ul li.active a {
-    background: #bea46b;
-}
-
-/* partners box styles */
-
-.partners-box {
-    float: right;
-    text-align: center;
-    width: 685px;
-    margin: 0 -24px 0 0;
-}
-
-.partners-box h2 {
-    font-size: 16px;
-    font-weight: 400;
-    font-family: "fira-sans", sans-serif;
-    line-height: 24px;
-    text-transform: uppercase;
-    color: #bea46b;
-}
-
-.partners-box .more-links {
-    text-align: right;
-    margin: 4px 15px 0;
-}
-
-/* partners slider styles */
-
-.partners-slider {
-    position: relative;
-}
-
-.partners-slider .mask {
-    position: relative;
-    width: 633px;
-    margin: 0 auto;
-    overflow: hidden;
-}
-
-.partners-slider .mask .slideset {
-    position: relative;
-}
-
-.partners-slider .mask .slide {
-    float: left;
-    width: 211px;
-    padding: 0 15px;
-}
-
-.partners-slider .btn-prev,
-.partners-slider .btn-next {
-    color: #e2e2e2;
-}
-
-.partners-slider .logo-holder {
-    height: 150px;
-    display: table;
-    width: 100%;
-}
-
-.partners-slider .logo-holder .logo-frame {
-    display: table-cell;
-    vertical-align: middle;
-
-    img {
-        max-width: 150px;
-    }
-}
-
-.logo-frame > a > img {
-    width: 150px;
-}
-
-.btn-prev,
-.btn-next {
-    color: #e2e2e2;
-    font-size: 37px;
-    line-height: 37px;
-    text-decoration: none;
-    position: absolute;
-    top: 50%;
-    margin: -18px 0 0;
-    left: 0;
-    -webkit-transition: all .25s linear;
-    transition: all .25s linear;
-}
-
-.btn-prev i,
-.btn-next i {
-    display: block;
-}
-
-.btn-prev:hover,
-.btn-next:hover {
-    -webkit-transition: all .25s linear;
-    transition: all .25s linear;
-    color: #a1a0a0;
-}
-
-.btn-next {
-    left: auto;
-    right: 0;
-}
 
 /* footer styles styles */
 
 #footer {
-    display: table-footer-group;
+    // display: table-footer-group;
     height: 1%;
     background: #121212;
 }
@@ -1816,7 +1640,7 @@ ol li:before {
     font-size: 20px;
     font-size: 1.25em;
     line-height: 1.1em;
-    font-family: "orpheuspro", sans-serif;
+    font-family: $base-serif-font;
     color: #000;
     margin: 0 0 3px;
 }
@@ -1878,7 +1702,7 @@ ol li:before {
     -webkit-transition: all .25s linear;
     transition: all .25s linear;
     font-size: 20px;
-    font-family: "orpheuspro", sans-serif;
+    font-family: $base-serif-font;
 }
 
 .region-slider .region .caption {
@@ -1970,7 +1794,7 @@ ol li:before {
     border-radius: 5px;
     text-align: center;
     font-weight: 700;
-    font-family: "orpheuspro", sans-serif;
+    font-family: $base-serif-font;
 }
 
 .btn-default:hover {
@@ -1982,14 +1806,10 @@ ol li:before {
 
 .footer-nav {
     background: #1e1e1e;
-    letter-spacing: -7px;
+    letter-spacing: 0;
+
 }
 
-.footer-nav .container {
-    padding-top: 105px;
-    padding-bottom: 61px;
-    position: relative;
-}
 
 .footer-nav .image {
     position: absolute;
@@ -2003,7 +1823,7 @@ ol li:before {
     font-size: 1.25em;
     line-height: 1.1em;
     font-weight: 700;
-    font-family: "orpheuspro", sans-serif;
+    font-family: $base-serif-font;
     text-transform: capitalize;
     margin: 0 0 15px;
 }
@@ -2013,19 +1833,20 @@ ol li:before {
     margin: 0 0 29px;
 }
 
-.footer-nav .col {
-    display: inline-block;
-    vertical-align: top;
+.footer-nav div {
     letter-spacing: 0;
-    width: 25%;
-    padding: 0 15px 29px 0;
+    // display: inline-block;
+    // vertical-align: top;
+    // letter-spacing: 0;
+    // width: 25%;
+    // padding: 0 15px 29px 0;
 }
 
 .footer-nav ul {
-    font-size: 15px;
-    font-size: .9375em;
-    line-height: 1.333em;
-    font-style: italic;
+    // font-size: 15px;
+    // font-size: .9375em;
+    // line-height: 1.333em;
+    // font-style: italic;
 }
 
 .footer-nav ul li {
@@ -2044,18 +1865,17 @@ ol li:before {
 
 .copyright {
     color: #959595;
-    padding-top: 22px;
-    padding-bottom: 22px;
-    text-align: center;
+    
+
     background: #121212;
 }
 
 .copyright .holder {
-    padding: 0 140px;
+    // padding: 0 140px;
 }
 
 .copyright p {
-    margin: 0 0 9px;
+    // margin: 0 0 9px;
 }
 
 .copyright p a {
@@ -2078,7 +1898,12 @@ ol li:before {
     display: inline-block;
     vertical-align: top;
     letter-spacing: 0;
-    padding: 0 12px;
+    &:first-of-type{
+        padding-right: 12px;
+    }
+     &:nth-of-type(2){
+        padding-left: 12px;
+    }
 }
 
 .copyright .policy-list li + li {
@@ -2282,7 +2107,7 @@ ol li:before {
 
 #content .tickets {
     font-weight: 700;
-    font-family: "orpheuspro", sans-serif;
+    font-family: $base-serif-font;
 }
 
 /* socials block styles */
@@ -2564,7 +2389,7 @@ ol li:before {
     line-height: 1.1em;
     position: relative;
     font-weight: 700;
-    font-family: "orpheuspro", sans-serif;
+    font-family: $base-serif-font;
 }
 
 .promo .caption-box strong {
@@ -2638,7 +2463,7 @@ ol li:before {
     font-size: .6451612903em;
     line-height: 1.1em;
     color: #bea46b;
-    font-family: "orpheuspro", sans-serif;
+    font-family: $base-serif-font;
     display: block;
     margin: 0 0 5px;
     text-transform: capitalize;
@@ -2780,7 +2605,7 @@ ol li:before {
 .adventure h2 {
     font-size: 41px;
     font-weight: 700;
-    font-family: "orpheuspro", sans-serif;
+    font-family: $base-serif-font;
     line-height: 47px;
     color: #000;
     margin: 0 0 8px;
@@ -2791,7 +2616,7 @@ ol li:before {
 .quiz-box .gform_wrapper h3.gform_title {
     font-size: 41px;
     font-weight: 700;
-    font-family: "orpheuspro", sans-serif;
+    font-family: $base-serif-font;
     line-height: 47px;
     color: #000;
     margin: 0 0 8px;
@@ -2811,7 +2636,7 @@ ol li:before {
     border-radius: 5px;
     text-align: center;
     font-weight: 700;
-    font-family: "orpheuspro", sans-serif;
+    font-family: $base-serif-font;
     border-style: none;
     margin: 0px;
 }
@@ -2836,7 +2661,7 @@ ol li:before {
 .adventure-block h2 {
     font-size: 41px;
     font-weight: 700;
-    font-family: "orpheuspro", sans-serif;
+    font-family: $base-serif-font;
     line-height: 47px;
     color: #000;
     margin: 0 0 8px;
@@ -2871,7 +2696,7 @@ ol li:before {
     padding: 80px 0 0 60px;
     font-weight: 700;
     font-size: 1.3em;
-    font-family: "orpheuspro", sans-serif;
+    font-family: $base-serif-font;
 }
 
 .adventure-block ul li p {
@@ -2889,7 +2714,7 @@ ol li:before {
 .tips-block h2 {
     font-size: 41px;
     font-weight: 700;
-    font-family: "orpheuspro", sans-serif;
+    font-family: $base-serif-font;
     line-height: 47px;
     color: #000;
     margin: 0 0 8px;
@@ -2920,7 +2745,7 @@ ol li:before {
     padding: 0 0 0 100px;
     font-weight: 700;
     font-size: 1.3em;
-    font-family: "orpheuspro", sans-serif;
+    font-family: $base-serif-font;
     color: #bea46b;
 }
 
@@ -3186,7 +3011,7 @@ ol li:before {
     font-size: 16px;
     font-size: 1em;
     line-height: 1.25em;
-    font-family: "fira-sans", sans-serif;
+    font-family: $base-sans-font;
     font-weight: 400;
     text-transform: uppercase;
     margin: 0 0 47px;
@@ -3437,7 +3262,7 @@ ol li:before {
 .links-list {
     font-size: 20px;
     font-weight: 700;
-    font-family: "orpheuspro", sans-serif;
+    font-family: $base-serif-font;
     line-height: 22px;
     display: table;
     width: 100%;
@@ -3502,7 +3327,7 @@ ol li:before {
     font-size: 25px;
     font-size: 1.5625em;
     line-height: 1.2em;
-    font-family: "orpheuspro", sans-serif;
+    font-family: $base-serif-font;
     margin: 0 0 6px;
 }
 
@@ -3521,7 +3346,7 @@ ol li:before {
 .blog-post .sub-title {
     color: #000;
     font-style: italic;
-    font-family: "orpheuspro", sans-serif;
+    font-family: $base-serif-font;
     display: block;
     margin: 0 0 10px;
 }
@@ -3566,7 +3391,7 @@ ol li:before {
 
 .article-section .article h2 {
     font-weight: 700;
-    font-family: "orpheuspro", sans-serif;
+    font-family: $base-serif-font;
     text-transform: none;
     margin: 0 0 9px;
 }
@@ -3599,7 +3424,7 @@ ol li:before {
 .sign-up-form h2 {
     font-size: 20px;
     font-weight: 700;
-    font-family: "orpheuspro", sans-serif;
+    font-family: $base-serif-font;
     color: #fff;
     line-height: 22px;
     margin: 0 0 31px;
@@ -4234,7 +4059,7 @@ body > .jcf-select-drop.jcf-drop-flipped {
     margin: 9px 0 0;
     float: left;
     font-size: 20px;
-    font-family: "orpheuspro", sans-serif;
+    font-family: $base-serif-font;
     line-height: 22px;
 }
 
@@ -6018,7 +5843,7 @@ body > .jcf-select-drop.jcf-drop-flipped {
         line-height: 18px;
         font-weight: 400;
         color: #959595;
-        font-family: "fira-sans", sans-serif;
+        font-family: $base-sans-font;
     }
 
     .categories-list .categories-opener span {
@@ -7448,7 +7273,7 @@ body > .jcf-select-drop.jcf-drop-flipped {
 
     .copyright,
     .footer-nav {
-        display: none;
+        // display: none;
     }
 
     .visual .images-block {
@@ -7552,6 +7377,16 @@ body > .jcf-select-drop.jcf-drop-flipped {
 //     }
 // }
 @import "color";
+@import "display";
+@import "flex";
+@import "home";
+@import "spacing";
+
+@import "margin";
+@import "font--utils";
 @import "grid";
+@import "sponsors";
 @import "block--singe--event";
 @import "section--home-header";
+@import "section--header-featured";
+@import "section--header-generic";

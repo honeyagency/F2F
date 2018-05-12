@@ -275,7 +275,7 @@ function my_scripts_method()
 {
     wp_enqueue_script(
         'custom-script',
-        get_stylesheet_directory_uri() . '/js/jquery.main.js',
+        get_stylesheet_directory_uri() . '/js/min/jquery.main-min.js',
         array('jquery')
     );
 }
@@ -669,4 +669,5 @@ class Razorback_Walker_Page_Selective_Children extends Walker_Page
 
 require_once 'library/farmtofork.php';
 
-// require_once 'library/custom-fields.php';
+require_once 'library/custom-fields.php';
+require_once 'library/functions--custom-posts.php';

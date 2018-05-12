@@ -1,0 +1,101 @@
+<footer id="footer" >
+	{# 
+	<div class="socials-area">
+		<div class="container">
+			<a href="/contact/newsletter-opt-in/" class="btn-default lightbox-opener">Email Sign-Up</a>
+			<ul class="socials-list">
+				<li>
+					<a href="https://www.facebook.com/FarmToForkCapital" target="_blank"><i class="icon-facebook-squared"></i></a>
+				</li>
+				<li>
+					<a href="https://twitter.com/sacfarm2fork" target="_blank"><i class="icon-twitter"></i></a>
+				</li>
+				<li>
+					<a href="https://instagram.com/sacfarm2fork/" target="_blank"><i class="icon-instagramm"></i></a>
+				</li>
+				<li>
+					<a href="https://www.pinterest.com/VisitSacramento/" target="_blank"><i class="icon-pinterest-squared"></i></a>
+				</li>
+				<li>
+					<a href="https://www.youtube.com/user/discovergold" target="_blank"><i class="icon-youtube"></i></a>
+				</li>
+				<li>
+					<a href="mailto:info@farmtoforkcapital.com" target="_blank"><i class="icon-mail-alt"></i></a>
+				</li>
+			</ul>
+		</div>
+	</div> #}
+	<!-- footer navigation -->
+	<div class="footer-nav">
+		<div class="flex flex--wrap justify--between spacing--gutter spacing--dsk-vert-4">
+			<div class="grid--one grid--sm-fourth">
+				<strong><a class="font--sans text--uppercase letter--2" href="/events/">Events</a></strong>
+				<ul>
+					{{function('wp_list_pages', "title_li=&child_of=10&depth=1")}}
+				</ul>
+				<i class="icon-social--twitter" data-grunticon-embed></i>
+			</div>
+			<div class="grid--one grid--sm-fourth">
+				<strong><a class="font--sans text--uppercase letter--2" href="/taste-and-tour/">Experience</a></strong>
+				<ul>
+					{{function('wp_list_pages', "title_li=&child_of=8&depth=1")}}
+				</ul>
+				<div class="hidden--mob"><br><br></div>
+				<strong><a class="font--sans text--uppercase letter--2" href="/news/">News</a></strong>
+				<ul>
+					<li class=""><a href="{{site.url}}/dig-in-blog/">Dig In Blog</a></li>
+					<li class=""><a href="https://www.visitsacramento.com/media/press-kit/">Press</a></li>
+				</ul>
+			</div>
+			<div class="grid--one grid--sm-fourth">
+				<strong><a class="font--sans text--uppercase letter--2" href="/what-we-do/">About</a></strong>
+				<ul>
+					<li class=""><a href="{{site.url}}/what-we-do/the-program/">The Program</a></li>
+					<li class=""><a href="{{site.url}}/what-we-do/why-sacramento/">Why Sacramento?</a></li>
+					<li class=""><a href="{{site.url}}/what-we-do/board-and-committee/">Board & Committee</a></li>
+				</ul>
+				<div class="hidden--mob"><br><br></div>
+				<strong><a class="font--sans text--uppercase letter--2" href="/join-and-support/">Join &amp; Support</a></strong>
+				<ul>
+					<li><a href="{{site.url}}/join-and-support/volunteer/">Volunteer</a></li>
+					<li><a href="{{site.url}}/contact/#sponsorships">Sponsorship Opportunities</a></li>
+					<li><a href="{{site.url}}/contact/">Contact</a></li>
+				</ul>
+			</div>
+			<div class="grid--one grid--sm-fourth letter--2 text--left">
+				<form action="/contact/newsletter-opt-in/" class="sign-up-form">
+					<fieldset>
+						<strong class="text--uppercase font--bold">Get Farm-to-Fork in Your Inbox</strong>
+						<div >
+							<label class="screenreader" for="email">Email*</label>
+							<input type="email" id="email" name="email" placeholder="Your Email">
+						</div>
+						<div >
+							<label class="screenreader" for="name">First Name</label>
+							<input type="text" id="first" name="first" placeholder="Your First Name">
+						</div>
+						<div >
+							<label class="screenreader" for="name">Last Name</label>
+							<input type="text" id="last" name="last" placeholder="Your Last Name">
+						</div>
+						<input type="submit" value="ENTER">
+					</fieldset>
+				</form>
+			</div>
+			
+			<div class="image">
+				<img src="{{assets}}/images/img21.png" height="207" width="178" alt="">
+			</div>
+		</div>
+	</div>
+	<!-- copyright area -->
+	<div class="copyright text--left spacing--gutter spacing--vert-2">
+		<div class="holder">
+			<p>Copyright &copy; {{now|date("Y")}} <a href="http://www.visitsacramento.com/" target="_blank">Visit Sacramento</a></p>
+			<ul class="policy-list">
+				<li><a href="/privacy-policy/">Privacy Policy</a></li>
+				<li>Website by <a href="https://honeyagency.com/" target="_blank">Honey Agency</a> &amp; <a href="http://positioninteractive.com/" target="_blank">Position Interactive</a></li>
+			</ul>
+		</div>
+	</div>
+</footer>

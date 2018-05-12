@@ -1,0 +1,21 @@
+<section class="section--header-featured">
+	<div class="block--title text--center">
+		<div class="h1 font--sans text--uppercase color--white">{{home.layout.title}}</div>
+		<div class="h1 font--sans text--uppercase color--white">{{home.layout.subtitle}}</div>
+	</div>
+	<div class="section--header-slider">
+	{% for event in home.events %}
+		<div class="event" id="carousel-cell{{loop.index}}" data-flickity-bg-lazyload="{{event.image|resize(2880)}}" style="background-image:url('{{event.image|resize(200)}}">
+		</div>
+	{% endfor %}
+</div>
+<div class="section--header-slider-nav flex flex--wrap justify--between">
+	{% for event in home.events %}
+
+		<a href="#carousel-cell{{loop.index}}" class="event--slide-nav grid--fifth bg--white spacing--horiz-1 spacing--vert-3">
+			{{event.title}}
+			{# <a href="{{event}}">Read More</a> #}
+		</a>
+	{% endfor %}
+</div>
+</section>

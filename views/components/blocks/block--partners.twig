@@ -1,0 +1,37 @@
+<div class="partners-box grid--one grid--sm-two-thirds grid--md-three-fourths">
+	<strong class="text--uppercase font--small letter--2 margin--bot-3 margin--mob-bot-1 displayblock">{{partners.title}}</strong>
+	
+	
+	<div class="partnerslide ">
+		<div class="flex flex--wrap justify--between grid--one align--items-baseline">
+			<div class="slide grid--half grid--sm-fourth">
+				{% for partner in partners.partners %}
+					
+					
+					
+					{% if partner.link.url %}
+						<a class="slide-holder margin--bot-half" style="background-image:url('{{partner.image|resize(300)}}')" href="{{partner.link.url}}" target="{{partner.link.target}}" title="{{partner.link.title}}" >
+							
+						</a>
+					{% else %}
+						<div class="slide-holder margin--bot-half"  style="background-image:url('{{partner.image|resize(300)}}')"></div>
+					{% endif %}
+					
+					{# Put Slides in pairs #}
+					{% if loop.index is divisible by(8) %}
+					</div></div><div class="flex flex--wrap justify--between grid--one align--items-baseline"><div class="slide grid--half grid--sm-fourth">
+				{% endif %}
+				{% if loop.index is even and loop.index is not divisible by(8)%}
+				</div>
+				<div class="slide grid--half grid--sm-fourth" id="{{loop.index}}">
+				{% endif %}
+			{% endfor %}
+		</div>
+		<a class="btn-prev" href="#"><i class="icon-left-open"></i></a>
+		<a class="btn-next" href="#"><i class="icon-right-open"></i></a>
+	</div>
+	<ul class="more-links">
+		<li><a href="/join-and-support/">Join and Support</a></li>
+		<li><a href="/join-and-support/partnership-opportunities/">Learn More about becoming a Partner</a></li>
+	</ul>
+</div>

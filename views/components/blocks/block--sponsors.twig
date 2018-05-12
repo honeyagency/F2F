@@ -1,0 +1,25 @@
+<div class="featured-box grid--one grid--sm-third grid--md-fourth">
+	<strong class="text--uppercase font--small letter--2 margin--bot-3 margin--mob-bot-1 displayblock">{{sponsors.title}}</strong>
+	<!-- feature slideshow -->
+	<div class="feature-slideshow">
+		<div class="slideset">
+			{% for sponsor in sponsors.sponsors %}
+				<div class="slide">
+					<div class="img-holder">
+						{% if sponsor.link.url %}
+							<a href="{{sponsor.link.url}}" target="{{sponsor.link.target}}" title="{{sponsor.link.title}}">
+							{% endif  %}
+							<?php }?>
+							<img src="{{sponsor.image|resize(30,25)}}" data-original="{{sponsor.image|resize(600,500)}}" alt="{{sponsor.link.title}}" height="250" width="300">
+							{% if sponsor.link.url %}
+							</a>
+						{% endif %}
+					</div>
+				</div>
+			{% endfor %}
+		</div>
+		<div class="pagination">
+			<!-- pagination generated here -->
+		</div>
+	</div>
+</div>
