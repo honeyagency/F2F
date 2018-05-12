@@ -9,6 +9,13 @@
 	],
 "creatorBuild": "26680",
 "files": {
+	"\/.gitignore": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/.gitignore",
+		"oF": 0
+		},
 	"\/.sass-cache\/3cf290a388d4981e72bb3d57f3377da30c3c7376\/style.scssc": {
 		"cB": 0,
 		"ft": 8192,
@@ -1890,12 +1897,6 @@
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/newsletter-thankyou.php",
-		"oF": 0
-		},
-	"\/node_modules": {
-		"ft": 65536,
-		"oA": 2,
-		"oAP": "\/build\/node_modules",
 		"oF": 0
 		},
 	"\/package-lock.json": {
