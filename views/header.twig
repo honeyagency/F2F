@@ -63,7 +63,7 @@
 											<div class="links-holder">
 												<h2>Events</h2>
 												<ul>
-													{{function('wp_list_pages', "title_li=&child_of=10&depth=1")}}
+													{{function('wp_list_pages', "title_li=&child_of=10&depth=1&exclude='54'")}}
 												</ul>
 											</div>
 										</div>
@@ -137,6 +137,7 @@
 									</fieldset>
 								</form>
 							</div>
+
 							{% include 'components/sections/section--quick-links.twig' %}
 							<div class="col-holder">
 								<ul class="socials-list">

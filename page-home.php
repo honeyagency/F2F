@@ -24,7 +24,7 @@
 $context               = Timber::get_context();
 $post                  = new TimberPost();
 $context['post']       = $post;
-$context['quicklinks'] = prepareQuickLinks();
+
 if (is_front_page()) {
     $context['home'] = prepareHomepageFields();
 }
