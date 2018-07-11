@@ -7479,22 +7479,26 @@ jQuery(document).ready(function($) {
     });
 });
 jQuery(document).ready(function($) {
-    var flky = new Flickity('.section--header-slider', {
-        bgLazyLoad: true,
-        cellAlign: 'left',
-        adaptiveHeight: true,
-        prevNextButtons: false,
-        hash: true,
-        pageDots: false
-    });
-    var flky2 = new Flickity('.partnerslide', {
-        cellAlign: 'left',
-        bgLazyLoad:true,
-        adaptiveHeight: false,
-        prevNextButtons: false,
-        hash: true,
-        pageDots: false
-    });
+    if ($('.section--header-slider').length > 0) {
+        var flky = new Flickity('.section--header-slider', {
+            bgLazyLoad: true,
+            cellAlign: 'left',
+            adaptiveHeight: true,
+            prevNextButtons: false,
+            hash: true,
+            pageDots: false
+        });
+    }
+    if ($('.partnerslide').length > 0) {
+        var flky2 = new Flickity('.partnerslide', {
+            cellAlign: 'left',
+            bgLazyLoad: true,
+            adaptiveHeight: false,
+            prevNextButtons: false,
+            hash: true,
+            pageDots: false
+        });
+    }
     // var flky2 = new Flickity('.section--header-slider-nav', {
     //     asNavFor: '.section--header-slider',
     //     contain: true,
