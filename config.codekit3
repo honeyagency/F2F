@@ -3294,6 +3294,13 @@
 		"oAP": "\/views\/components\/sections\/section--quick-links.twig",
 		"oF": 0
 		},
+	"\/views\/components\/sections\/section--signature-event-sponsors.twig": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/views\/components\/sections\/section--signature-event-sponsors.twig",
+		"oF": 0
+		},
 	"\/views\/components\/sections\/section--sponsors.twig": {
 		"cB": 0,
 		"ft": 8192,

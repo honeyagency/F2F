@@ -2653,8 +2653,8 @@ ol li:before {
 }
 
 .adventure-block {
-    width: 67.3%;
-    float: left;
+    // width: 67.3%;
+    // float: left;
     margin: 0 0 -37px;
 }
 
@@ -2664,9 +2664,9 @@ ol li:before {
     font-family: $base-serif-font;
     line-height: 47px;
     color: #000;
-    margin: 0 0 8px;
+    // margin: 0 0 8px;
     text-transform: none;
-    margin-top: -13px;
+    // margin-top: -13px;
 }
 
 .adventure-block ul {
@@ -2675,25 +2675,26 @@ ol li:before {
 }
 
 .adventure-block ul li {
-    display: inline-block;
-    width: 48%;
-    padding: 60px 60px 0 0;
+    // display: inline-block;
+    // width: 48%;
+    // padding: 60px 60px 0 0;
     vertical-align: top;
 }
 
 .adventure-block ul li img {
-    position: absolute;
+    // position: absolute;
     z-index: 1;
-    margin-top: -50px;
-    margin-left: -25px;
+    // margin-top: -50px;
+    // margin-left: -25px;
     width: 100px;
-    height: 100px;
+    height: auto;
+    max-width: 100%;
 }
 
 .adventure-block ul li .title {
     z-index: 9;
     position: relative;
-    padding: 80px 0 0 60px;
+    // padding: 80px 0 0 60px;
     font-weight: 700;
     font-size: 1.3em;
     font-family: $base-serif-font;
@@ -2702,7 +2703,7 @@ ol li:before {
 .adventure-block ul li p {
     z-index: 9;
     position: relative;
-    padding: 5px 0 0 0;
+    // padding: 5px 0 0 0;
 }
 
 .tips-block {

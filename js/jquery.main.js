@@ -7496,9 +7496,20 @@ jQuery(document).ready(function($) {
             adaptiveHeight: false,
             prevNextButtons: false,
             hash: true,
-            pageDots: false
+            autoPlay: true,
+            pageDots: true
         });
     }
+       var flky3 = new Flickity('.partners-slider', {
+            cellAlign: 'left',
+            bgLazyLoad: true,
+            adaptiveHeight: false,
+            prevNextButtons: false,
+            hash: true,
+            autoPlay: true,
+            pageDots: false
+        });
+    
     // var flky2 = new Flickity('.section--header-slider-nav', {
     //     asNavFor: '.section--header-slider',
     //     contain: true,

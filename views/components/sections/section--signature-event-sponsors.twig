@@ -1,0 +1,78 @@
+<section class="featured-area flex flex--wrap justify--between">
+	{% if event.ads %}
+		<div class="grid--one grid--sm-third grid--md-fourth">
+			<div class="featured-box">
+				<strong class="text--uppercase font--small letter--2 margin--bot-3 margin--mob-bot-1 displayblock"></strong>
+				<!-- feature slideshow -->
+				<div class="feature-slideshow">
+					<div class="slideset">
+						
+						<div class="featured-box grid--one grid--sm-third">
+							<div class="feature-slideshow">
+								<div class="slideset">
+									{% for ad in event.ads %}
+										<div class="slide">
+											<div class="img-holder">
+												{% if ad.link.url %}
+													<a href="{{ad.link.url}}" target="{{ad.link.target}}" title="{{ad.link.title}}">
+													{% endif  %}
+													<?php }?>
+													<img src="{{ad.image|resize(30,25)}}" data-original="{{ad.image|resize(600,500)}}" alt="{{ad.link.title}}" height="250" width="300">
+													{% if ad.link.url %}
+													</a>
+												{% endif %}
+											</div>
+										</div>
+									{% endfor %}
+								</div>
+								<div class="pagination">
+									<!-- pagination generated here -->
+								</div>
+							</div>
+						</div>
+						
+					</div>
+				</div>
+			</div>
+		</div>
+	{% endif %}
+	<!-- partners box -->
+	<div class="partners-box grid--one{% if event.ads %} grid--sm-two-thirds{% else %}{% endif %}">
+	<strong class="text--uppercase font--small letter--2 margin--bot-3 margin--mob-bot-1 displayblock">{{event.sponsors.title}}</strong>
+	
+	
+	<div class="partnerslide ">
+		<div class="flex flex--wrap justify--between grid--one align--items-baseline">
+			<div class="slide grid--half grid--sm-fourth">
+				{% for partner in event.sponsors.sponsors %}
+					
+					
+					
+					{% if partner.link.url %}
+						<a class="slide-holder margin--bot-half" style="background-image:url('{{partner.image|resize(300)}}')" href="{{partner.link.url}}" target="{{partner.link.target}}" title="{{partner.link.title}}" >
+							
+						</a>
+					{% else %}
+						<div class="slide-holder margin--bot-half"  style="background-image:url('{{partner.image|resize(300)}}')"></div>
+					{% endif %}
+					
+					{# Put Slides in pairs #}
+					{% if loop.index is divisible by(8) %}
+					</div></div><div class="flex flex--wrap justify--between grid--one align--items-baseline"><div class="slide grid--half grid--sm-fourth">
+				{% endif %}
+				{% if loop.index is even and loop.index is not divisible by(8)%}
+				</div>
+				<div class="slide grid--half grid--sm-fourth" id="{{loop.index}}">
+				{% endif %}
+			{% endfor %}
+		</div>
+		
+		
+	</div>
+	
+</div>
+<ul class="more-links">
+	<li><a href="/join-and-support/">Join and Support</a></li>
+	<li><a href="/join-and-support/partnership-opportunities/">Learn More about becoming a Partner</a></li>
+</ul>
+</section>

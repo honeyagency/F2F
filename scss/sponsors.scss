@@ -196,20 +196,31 @@
 }
 
 .partnerslide {
-    .flickity-slider {
+    .flickity-slider {}
 
-    }
-    .slide-holder{
+    .slide-holder {
         display: block;
         min-height: 120px;
         background-position: center;
         background-size: contain;
         background-repeat: no-repeat;
-        @include media($screen-xs){}
-        @include media($screen-sm){}
-        @include media($screen-lg){
-            background-size: 170px;
-        }
 
+        @include media($screen-lg) {
+            background-size: 100%;
+
+        }
+    }
+
+    .flickity-page-dots {
+        text-align: left;
+
+        .dot {
+            background-color: $gold;
+            padding: 0;
+
+            &:before {
+                display: none;
+            }
+        }
     }
 }

@@ -185,3 +185,51 @@ function preparePartners()
     );
     return $section;
 }
+
+function prepareExtendedSignatureEventFields()
+{
+
+    if (have_rows('field_57834abc64c7b')) {
+        $sponsor = array();
+        while (have_rows('field_57834abc64c7b')) {
+            the_row();
+            $sponsorImageId = get_sub_field('field_57834b913a9c5');
+            $sponsorImage   = null;
+            if (!empty($sponsorImageId)) {
+                $sponsorImage = new TimberImage($sponsorImageId);
+            }
+            $sponsor[] = array(
+                'name'  => get_sub_field('field_57834ac2a2176'),
+                'image' => $sponsorImage,
+                'link'  => get_sub_field('field_57834ac2a2210'),
+            );
+        }
+    }
+    if (have_rows('field_57834bd93a9c7')) {
+        $ads = array();
+        while (have_rows('field_57834bd93a9c7')) {
+            the_row();
+            $adImageId = get_sub_field('field_57834c053a9c8');
+            $adImage   = null;
+            if (!empty($adImageId)) {
+                $adImage = new TimberImage($adImageId);
+            }
+            $ads[] = array(
+                'name'  => get_sub_field('field_57834f1f48c4b'),
+                'image' => $adImage,
+                'link'  => get_sub_field('field_57834c0e3a9c9'),
+            );
+        }
+    }
+    // print_r($ads);
+
+    $sponsors = array(
+        'title'    => get_field('field_57834abc64bf4'),
+        'sponsors' => $sponsor,
+    );
+    $section = array(
+        'sponsors' => $sponsors,
+        'ads'       => $ads,
+    );
+    return $section;
+}

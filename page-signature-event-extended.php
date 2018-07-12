@@ -2,6 +2,10 @@
 /*
 Template Name: Signature Event (extended)
 */
+$context               = Timber::get_context();
+$context['event'] = prepareExtendedSignatureEventFields();
+// print_r($context);
+
 ?>
 
 <?php get_header(); ?>
@@ -176,133 +180,28 @@ Template Name: Signature Event (extended)
 			<!-- sponsors block -->
             <?php
 
-			// check if the repeater field has rows of data
-			if( have_rows('sponsors') ):
-			?>
-            
-            <section class="container featured-area">
-			<div class="featured-box">
-				<!-- feature slideshow -->
-				<div class="feature-slideshow">
-					<div class="slideset">
-                    <?php
-
-					// check if the repeater field has rows of data
-					if( have_rows('ads') ):
-					
-						// loop through the rows of data
-						while ( have_rows('ads') ) : the_row();
-					?>
-							<div class="slide">
-							<div class="img-holder">	
-                            	<?php $hero_image = get_sub_field('image');?>
-                                <?php if($hero_url = get_sub_field('url')) {?>
-                                <a href="<?php echo $hero_url;?>" target="_blank">
-								<?php }?>
-                                <img src="<?php echo $hero_image['url'];?>" height="250" width="300" alt="<?php the_sub_field('name');?>">
-                                <?php if($hero_url = get_sub_field('url')) {?>
-                                </a>
-								<?php }?>
-							</div>
-						</div>
-					<?php
-						endwhile;
-					
-					endif;
-					
-					?>
-					</div>
-					<div class="pagination">
-						<!-- pagination generated here -->
-					</div>
-				</div>
-			</div>
-			<!-- partners box -->
-			<div class="partners-box">
-				<h2><?php the_field('sponsors_title');?></h2>
-				<div class="partners-slider">
-					<div class="mask">
-						<div class="slideset">
-                        	<div class="slide">
-                        <?php
-
-						// check if the repeater field has rows of data
-						if( have_rows('sponsors') ):
-						
-							$sponsors = get_field('sponsors');
-							shuffle($sponsors);
-							
-							$count = 1;
-							
-							// loop through the rows of data
-							foreach ( $sponsors as $sponsor):
-						?>
-								<div class="slide-holder">
-									<div class="logo-holder">
-										<div class="logo-frame">
-                                        <?php $sponsor_logo = $sponsor['logo'];?>
-										<?php if($sponsor_url = 	$sponsor['url']) {?>
-                                            <a href="<?php echo $sponsor_url;?>" target="_blank">
-                                        <?php }?>
-                                        <?php if($sponsor_logo) {?>
-												<img width="150" src="<?php echo $sponsor_logo['url'];?>" alt="<?php echo $sponsor['sponsor_name'];?>">
-                                        <?php } else { ?>
-                                        		<?php echo $sponsor['sponsor_name'];?>
-                                        <?php } ?>
-										<?php if($sponsor_url) {?>
-                                            </a>
-                                        <?php }?>
-										</div>
-									</div>
-								</div>
-						<?php
-						
-							if($count == 2) {
-								
-								echo '</div><div class="slide">';
-								$count = 0;
-								
-							}
-						
-							$count ++;
-						
-							endforeach;
-						
-						endif;
-						
-						?>
-							</div>
-						</div>
-					</div>
-					<a class="btn-prev" href="#"><i class="icon-left-open"></i></a>
-					<a class="btn-next" href="#"><i class="icon-right-open"></i></a>
-				</div>
-			</div>
-		</section>
-        
-            <?php	
-			endif;
-			
+			Timber::render('components/sections/section--signature-event-sponsors.twig', $context);
 			?>
 		</div>
         
         <div class="twocolumns container add">
 			<section class="adventure-block">
-            	<h2>Event Details</h2>
+            	<h2 class="margin--bot-1">Event Details</h2>
                 <?php
 
 				// check if the repeater field has rows of data
 				if( have_rows('event_details') ):
 				?>
-                <ul>
+                <ul class="flex flex--wrap justify--between">
                 <?php
 					// loop through the rows of data
 					while ( have_rows('event_details') ) : the_row();
 				?>
-                	<li>
-                    	<img src="<?php $image = get_sub_field('image'); echo $image['url'];?>">
-                    	<strong class="title"><a href="<?php the_sub_field('url');?>"><?php the_sub_field('title');?></a></strong>
-                    	<?php the_sub_field('description');?>					
+                	<li class="flex flex--wrap justify--around align--items-center grid--one grid--xs-half margin--bot-2">
+                    	<div class="grid--half grid--xs-fourth"><img src="<?php $image = get_sub_field('image'); echo $image['url'];?>"></div>
+                    	<div class="grid--two-thirds"><strong class="title"><a href="<?php the_sub_field('url');?>"><?php the_sub_field('title');?></a></strong>
+                    	<?php the_sub_field('description');?>
+                    </div>
                     </li>
 				<?php
 					endwhile;
