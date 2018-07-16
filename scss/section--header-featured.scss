@@ -94,7 +94,7 @@
                 @include media($screen-xs){
                     background-size: 400%;
                 }
-                @include media($screen-md){background-size: 220vw;}
+                @include media($screen-lg){background-size: 220vw;}
 
                 @include media($screen-lg){}
                 @include media($screen-xl){}
