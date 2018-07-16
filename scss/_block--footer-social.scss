@@ -1,0 +1,27 @@
+.block--footer-social {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+
+    li {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+
+        a {
+            display: inline-block;
+            margin-right: 20px;
+        }
+
+        i {
+            width: 15px;
+            height: 15px;
+            display: inline-block;
+
+            svg {
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+}
