@@ -159,5 +159,6 @@ module.exports = function(grunt) {
     grunt.registerTask('default', ['watch', 'notify_hooks']);
     grunt.registerTask('icons', ['svgmin', 'grunticon', 'clean', 'copy']);
     grunt.registerTask('server', ['uglify', 'sass', 'cssnano', 'svgmin', 'grunticon', 'clean', 'copy']);
+    grunt.registerTask('style', ['uglify', 'sass', 'cssnano', 'copy']);
     grunt.task.run('notify_hooks');
 }

@@ -83,13 +83,21 @@
                 z-index: 101;
                 height: calc(100% + 185px);
                 background: url(../images/lines.svg);
-                background-size: 220vw;
+                
                 background-position: center;
 
                 @include media($max-sm) {
                     height: calc(100% + 145px);
-                    background-size: 650%;
+                    
                 }
+                background-size: 650%;
+                @include media($screen-xs){
+                    background-size: 400%;
+                }
+                @include media($screen-sm){background-size: 220vw;}
+                @include media($screen-md){}
+                @include media($screen-lg){}
+                @include media($screen-xl){}
             }
         }
 
