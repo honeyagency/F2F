@@ -1,5 +1,10 @@
 .section--header-featured {
-    margin-bottom: 15em;
+    margin-bottom: 12em;
+
+    @include media($screen-md) {
+        margin-bottom: 15em;
+    }
+
 
     &:before {
         position: absolute;
@@ -25,12 +30,18 @@
         height: calc(80vh - 100px);
     }
 
-@include media($screen-xs){}
-@include media($screen-sm){}
-@include media($screen-md){}
-@include media($screen-lg){
-    height: calc(100vh - 100px);
-}
+
+    @include media($screen-xs) {}
+
+    @include media($screen-sm) {}
+
+    @include media($screen-md) {}
+
+    @include media($screen-lg) {
+        height: calc(100vh - 100px);
+    }
+
+
     position: relative;
 
     .block--title {
@@ -52,10 +63,10 @@
             font-size: 2rem;
         }
 
-@include media($screen-xs){}
-@include media($screen-sm){
+        @include media($screen-xs) {}
 
-       .h1 {
+        @include media($screen-sm) {
+            .h1 {
                 font-size: 5.5rem;
                 letter-spacing: 15px;
             }
@@ -64,7 +75,9 @@
                 letter-spacing: 7px;
                 font-size: 3rem;
             }
-}
+        }
+
+
         @include media($screen-md) {
             .h1 {
                 font-size: 7rem;
@@ -123,6 +136,7 @@
 
 
                 @include media($screen-lg) {}
+
 
                 @include media($screen-xl) {}
             }
