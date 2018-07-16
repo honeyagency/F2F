@@ -25,7 +25,12 @@
         height: calc(80vh - 100px);
     }
 
-
+@include media($screen-xs){}
+@include media($screen-sm){}
+@include media($screen-md){}
+@include media($screen-lg){
+    height: calc(100vh - 100px);
+}
     position: relative;
 
     .block--title {
