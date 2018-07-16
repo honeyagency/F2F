@@ -1679,6 +1679,10 @@ ol li:before {
     position: absolute;
     right: 24px;
     bottom: -64px;
+
+    @include media($max-sm) {
+        display: none;
+    }
 }
 
 .footer-nav h2 {
