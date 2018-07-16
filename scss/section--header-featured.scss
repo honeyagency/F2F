@@ -45,7 +45,7 @@
     position: relative;
 
     .block--title {
-        text-shadow: 0 0 30px transparentize($black, 0.65);
+        text-shadow: 0 0 15px transparentize($black, 0.75);
         z-index: 105;
         position: absolute;
         left: 50%;
