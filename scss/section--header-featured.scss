@@ -47,7 +47,20 @@
             font-size: 2rem;
         }
 
-        @include media($screen-sm) {
+@include media($screen-xs){}
+@include media($screen-sm){
+
+       .h1 {
+                font-size: 5.5rem;
+                letter-spacing: 15px;
+            }
+
+            .h2 {
+                letter-spacing: 7px;
+                font-size: 3rem;
+            }
+}
+        @include media($screen-md) {
             .h1 {
                 font-size: 7rem;
                 letter-spacing: 15px;
