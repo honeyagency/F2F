@@ -1,14 +1,26 @@
 .section--home-news {
     // border-top:1px  solid #C4C4C4;
     // border-bottom:1px  solid #C4C4C4;
-    hr{
-    	&:last-of-type{
-    		@include media($screen-xs){}
-    		@include media($screen-sm){
-    			margin-top: 3em;
-    		}
-    		@include media($screen-md){}
-    	}
+    hr {
+        &:last-of-type {
+            @include media($screen-xs) {}
+
+
+            @include media($screen-sm) {
+                margin-top: 3em;
+            }
+
+
+            @include media($screen-md) {}
+        }
+    }
+
+    @include media($screen-sm) {
+        &.featlayout {
+            > div {
+                border: 1px solid;
+            }
+        }
     }
 }
 

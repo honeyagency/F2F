@@ -1,14 +1,16 @@
-<section class="section--home-news flex flex--wrap justify--between spacing--gutter align--items-center spacing--vert-3 spacing--dsk-vert-0">
-	<hr class="hrgray grid--one margin--bot-3">
+<section class="section--home-news spacing--gutter spacing--vert-3 spacing--dsk-vert-0 {% if home.layout.layout != 'generic' %}featlayout{% endif %}">
+<div class="flex flex--wrap justify--between align--items-center">
+	{% if home.layout.layout == 'generic' %}<hr class="hrgray grid--one margin--bot-3">{% endif %}
 	{# {{home.news|print_r}} #}
 	<div class="grid--one grid--md-half">
-		<strong class="text--uppercase font--small letter--2 hidden--dsk margin--bot-2 displayblock">Latest News</strong>
-		<img src="{{home.news.image}}" alt="">
+		<strong class="text--uppercase font--small letter--2 hidden--dsk margin--bot-2 margin--mob-bot-1 displayblock">Latest News</strong>
+		<img src="{{home.news.image}}" alt="" class="display--block">
 	</div>
 	<div class="grid--one grid--md-half spacing--vert-2 spacing--dsk-horiz-1 spacing--dsk-vert-0">
 		<strong class="text--uppercase font--small letter--2 hidden--mob">Latest News</strong>
 		<h2 class="hometitle color--black">{{home.news.title}}</h2>
 		<a href="{{home.news.link}}" class="text--uppercase font--tiny">Read more</a>
 	</div>
-	<hr class="hrgray grid--one margin--top-3 ">
+	{% if home.layout.layout == 'generic' %}<hr class="hrgray grid--one margin--top-3 ">{% endif %}
+</div>
 </section>

@@ -1,21 +1,30 @@
 <section class="section--header-featured">
 	<div class="block--title text--center">
 		<div class="h1 font--sans text--uppercase color--white">{{home.layout.title}}</div>
-		<div class="h1 font--sans text--uppercase color--white">{{home.layout.subtitle}}</div>
+		<div class="h2 font--sans text--uppercase color--white">{{home.layout.subtitle}}</div>
 	</div>
 	<div class="section--header-slider">
-	{% for event in home.events %}
-		<div class="event" id="carousel-cell{{loop.index}}" data-flickity-bg-lazyload="{{event.image|resize(2880)}}" style="background-image:url('{{event.image|resize(200)}}">
+		{# {{home|print_r}} #}
+		{% for event in home.events.events %}
+			<div class="event" id="carousel-cell{{loop.index}}" data-flickity-bg-lazyload="{{event.image|resize(2880)}}" style="background-image:url('{{event.image|resize(200)}}">
+			</div>
+		{% endfor %}
+	</div>
+	<div class="section--header-slider-nav flex flex--wrap justify--between">
+		{% for event in home.events.events %}
+			<div class="event--slide-nav grid--one grid--sm-fourth bg--white spacing--horiz-2 spacing--vert-1 flex flex--column justify--between">
+				<div class="event--slide-meta font--small letter--1 text--uppercase">
+					<strong>{{event.title}}</strong><br>
+					<time class="font--bold color--gray">{{event.date|date('M d')}}</time>
+				</div>
+				<div>
+					<a href="{{event.link}}" class="text--uppercase font--tiny letter--1 display--block">Read More</a>
+				</div>
+			</div>
+		{% endfor %}
+	</div>
+	<div class="block--events-link text--right spacing--gutter">
+			<a class="button" href="{{home.events.link.url}}" target="{{home.events.link.target}}" title="{{home.events.link.title}}">{{home.events.link.title}}</a><br><br>
+			<span class="color--gray font--tiny text--uppercase letter--2 font--bold">{{home.events.by}}</span>
 		</div>
-	{% endfor %}
-</div>
-<div class="section--header-slider-nav flex flex--wrap justify--between">
-	{% for event in home.events %}
-
-		<a href="#carousel-cell{{loop.index}}" class="event--slide-nav grid--fifth bg--white spacing--horiz-1 spacing--vert-3">
-			{{event.title}}
-			{# <a href="{{event}}">Read More</a> #}
-		</a>
-	{% endfor %}
-</div>
 </section>

@@ -1,4 +1,6 @@
 .section--header-featured {
+    margin-bottom: 15em;
+
     &:before {
         position: absolute;
         top: 0;
@@ -17,15 +19,49 @@
         -moz-mix-blend-mode: multiply;
     }
 
-    height: calc(100vh - 120px);
+    height: 380px;
+
+    @include media($screen-sm) {
+        height: calc(100vh - 120px);
+    }
+
+
     position: relative;
 
     .block--title {
+        text-shadow: 0 0 30px transparentize($black, 0.65);
         z-index: 105;
         position: absolute;
         left: 50%;
         top: 50%;
         transform: translateY(-50%) translateX(-50%);
+
+        .h1 {
+            font-size: 3.3rem;
+            letter-spacing: 3px;
+        }
+
+        .h2 {
+            font-weight: 700;
+            letter-spacing: 5px;
+            font-size: 2rem;
+        }
+
+        @include media($screen-sm) {
+            .h1 {
+                font-size: 7rem;
+                letter-spacing: 15px;
+            }
+
+            .h2 {
+                letter-spacing: 7px;
+                font-size: 3rem;
+            }
+        }
+
+        @include media($max-sm){
+            width: 80%;
+        }
     }
 
     .section--header-slider {
@@ -46,9 +82,14 @@
                 width: 100%;
                 z-index: 101;
                 height: calc(100% + 185px);
-                background: url(images/lines.svg);
+                background: url(../images/lines.svg);
                 background-size: 220vw;
                 background-position: center;
+
+                @include media($max-sm) {
+                    height: calc(100% + 145px);
+                    background-size: 650%;
+                }
             }
         }
 
@@ -64,15 +105,59 @@
     .section--header-slider-nav {
         z-index: 110;
         position: relative;
-        top: -1em;
+        top: -3em;
 
-        .event--slide-nav {
-            transition: transform 0.3s $base-animation;
+        .flickity-viewport {
+            width: 100%;
 
-            &.active {
-                transition: transform 0.3s $base-animation;
-                transform: translateY(-1em);
+            @extend .spacing--gutter;
+
+            position: relative !important;
+            overflow: visible !important;
+            height: auto !important;
+
+            .flickity-slider {
+                display: flex !important;
+                justify-content: space-between;
+                position: relative !important;
+                overflow: visible !important;
+                height: auto !important;
+                align-items: flex-end;
+
+                .event--slide-nav {
+                    position: relative !important;
+                    left: auto !important;
+                    border-top: 10px solid white;
+
+                    @include media($screen-sm) {
+border-top: 0px solid $gold;
+transition: border .2s $base-animation;
+                        min-height: 150px;
+                    }
+
+
+                    &.is-nav-selected {
+                        @include media($screen-sm) {
+                            transition: border .2s $base-animation;
+border-top: 10px solid $gold;
+                        }
+
+
+                        
+                    }
+
+                    @include media($max-sm) {
+                        min-height: 130px;
+                        min-width: 80%;
+                        margin-right: 1em;
+                    }
+                }
             }
         }
+    }
+
+    .block--events-link {
+        z-index: 99;
+        position: relative;
     }
 }

@@ -7479,13 +7479,49 @@ jQuery(document).ready(function($) {
     });
 });
 jQuery(document).ready(function($) {
+    if (window.matchMedia('(max-width: 767px)').matches) {
+        var mob = true;
+    } else {
+        var mob = false;
+    }
+    if (mob == true) {
+        if ($('.section--header-slider-nav').length > 0) {
+            var headernav = new Flickity('.section--header-slider-nav', {
+                // bgLazyLoad: true,
+                percentPosition: true,
+                draggable: true,
+                // contain:true,
+                asNavFor: '.section--header-slider',
+                cellAlign: 'left',
+                adaptiveHeight: false,
+                prevNextButtons: false,
+                // hash: true,
+                pageDots: false
+            });
+        }
+    } else {
+        if ($('.section--header-slider-nav').length > 0) {
+            var headernav = new Flickity('.section--header-slider-nav', {
+                // bgLazyLoad: true,
+                freeScroll: false,
+                draggable: false,
+                contain: true,
+                asNavFor: '.section--header-slider',
+                cellAlign: 'left',
+                adaptiveHeight: false,
+                prevNextButtons: false,
+                // hash: true,
+                pageDots: false
+            });
+        }
+    }
     if ($('.section--header-slider').length > 0) {
         var flky = new Flickity('.section--header-slider', {
             bgLazyLoad: true,
             cellAlign: 'left',
-            adaptiveHeight: true,
+            adaptiveHeight: false,
             prevNextButtons: false,
-            hash: true,
+            // hash: true,
             pageDots: false
         });
     }
@@ -7496,27 +7532,21 @@ jQuery(document).ready(function($) {
             adaptiveHeight: false,
             prevNextButtons: false,
             hash: true,
-            autoPlay: true,
+            autoPlay: false,
             pageDots: true
         });
     }
-       var flky3 = new Flickity('.partners-slider', {
+    if ($('.partners-slider').length > 0) {
+        var flky3 = new Flickity('.partners-slider', {
             cellAlign: 'left',
             bgLazyLoad: true,
             adaptiveHeight: false,
             prevNextButtons: false,
             hash: true,
-            autoPlay: true,
+            autoPlay: false,
             pageDots: false
         });
-    
-    // var flky2 = new Flickity('.section--header-slider-nav', {
-    //     asNavFor: '.section--header-slider',
-    //     contain: true,
-    //     draggable: false,
-    //     prevNextButtons: false,
-    //     pageDots: false
-    // });
+    }
     $('.event--slide-nav').on('click touchstart', function(event) {
         if ($(this).hasClass('active')) {
             $(this).toggleClass('active');

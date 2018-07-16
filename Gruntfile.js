@@ -1,7 +1,10 @@
+const sass = require('node-sass');
+var Fiber = require("fibers");
+
 module.exports = function(grunt) {
     grunt.initConfig({
         conf: {
-            js: 'static/**/*.js',
+            js: 'js/**/*.js',
             sass: 'scss/**/*.scss',
             app: 'app',
             icons: 'static/icons',
@@ -10,6 +13,74 @@ module.exports = function(grunt) {
         clean: {
             icons: {
                 src: ["<%= conf.appIcons %>/*"]
+            }
+        },
+        uglify: {
+            dist: {
+                files: {
+                    "app/app.min.js": 'js/jquery.main.js',
+                }
+            },
+        },
+        sass: {
+            dist: {
+                options: {
+                    implementation: sass,
+                    fiber: Fiber,
+                    sourceMap: false
+                },
+                files: {
+                    '<%= conf.app %>/main.min.css': 'scss/style.scss',
+                }
+            }
+        },
+        cssnano: {
+            options: {
+                sourcemap: false,
+                'postcss-zindex': false,
+                'postcss-merge-idents': true,
+                'postcss-discard-duplicates': true,
+                'postcss-convert-values': true,
+                autoprefixer: {
+                    browsers: ['> 1%', 'last 2 versions', 'Firefox >= 20'],
+                    add: true
+                }
+            },
+            dist: {
+                files: {
+                    '<%= conf.app %>/main.min.css': '<%= conf.app %>/main.min.css'
+                }
+            }
+        },
+        // postcss: {
+        //     options: {
+        //         processors: [
+        //             require('postcss-font-magician')({
+        //                 hosted: 'fonts/'
+        //             })
+        //         ]
+        //     },
+        //     dist: {
+        //         src: '<%= conf.app %>/main.min.css'
+        //     }
+        // },
+        watch: {
+            twig: {
+                files: '**/*.twig',
+                options: {
+                    livereload: true,
+                },
+            },
+            scripts: {
+                files: ["<%= conf.js %>"],
+                tasks: ["uglify"]
+            },
+            sass: {
+                files: ["<%= conf.sass %>"],
+                tasks: ["sass"],
+                options: {
+                    livereload: true,
+                },
             }
         },
         svgmin: {
@@ -51,11 +122,42 @@ module.exports = function(grunt) {
                 flatten: true,
                 filter: 'isFile',
             },
+            style: {
+                expand: true,
+                cwd: '<%= conf.icons %>/final/',
+                src: ['*.css'],
+                dest: '<%= conf.appIcons %>',
+                flatten: true,
+                filter: 'isFile',
+            },
+            js: {
+                expand: true,
+                cwd: 'static/markdown/files/',
+                src: '**',
+                dest: 'library/docs/assets/',
+                flatten: true,
+                filter: 'isFile',
+            },
+        },
+        notify_hooks: {
+            options: {
+                enabled: true,
+                success: true
+            }
         },
     });
+    grunt.loadNpmTasks('grunt-cssnano');
+    grunt.loadNpmTasks('grunt-postcss');
+    grunt.loadNpmTasks('grunt-notify');
+    grunt.loadNpmTasks('grunt-contrib-watch');
+    grunt.loadNpmTasks('grunt-sass');
+    grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-clean');
     grunt.loadNpmTasks('grunt-svgmin');
     grunt.loadNpmTasks('grunt-grunticon');
     grunt.loadNpmTasks('grunt-contrib-copy');
-    grunt.registerTask('default', ['svgmin', 'grunticon', 'clean', 'copy']);
+    grunt.registerTask('default', ['watch', 'notify_hooks']);
+    grunt.registerTask('icons', ['svgmin', 'grunticon', 'clean', 'copy']);
+    grunt.registerTask('server', ['uglify', 'sass', 'cssnano', 'svgmin', 'grunticon', 'clean', 'copy']);
+    grunt.task.run('notify_hooks');
 }

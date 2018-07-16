@@ -1,0 +1,25 @@
+.section--about-featured {
+    .icon-wheat {
+        width: 45px;
+        display: inline-block;
+
+        svg {
+            width: 100%;
+        }
+    }
+
+    .icon-weare-nobg {
+        max-width: 225px;
+        display: block;
+        margin: 0 auto;
+
+        @include media($screen-sm) {
+            max-width: 265px;
+            display: block;
+        }
+    }
+
+    @include media($max-sm) {
+        text-align: center;
+    }
+}

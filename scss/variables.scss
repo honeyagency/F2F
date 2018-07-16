@@ -1,9 +1,12 @@
 $gold: #bea46b;
-$black: #555;
+$black: #000000;
+$gray: #c4c4c4;
+
 $phone: 500px;
 $tablet: 768px;
 $desk: 1130px;
 $white: white;
+
 
 // $link-color: $blue;
 
@@ -78,3 +81,22 @@ $max-sm: 	new-breakpoint(max-width $screen-sm-max 12);
 $max-smd: 	new-breakpoint(max-width $screen-smd-max 12);
 $max-md:  	new-breakpoint(max-width $screen-md-max  6);
 $max-lg:  	new-breakpoint(max-width $screen-lg-max  6);
+
+
+
+@mixin accelerate {
+
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -ms-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-perspective: 1000;
+    -moz-perspective: 1000;
+    -ms-perspective: 1000;
+    perspective: 1000;
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    -ms-transform: translate3d(0, 0, 0);
+    -o-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+}

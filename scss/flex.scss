@@ -22,6 +22,10 @@
     flex-wrap: wrap;
 }
 
+.flex--column {
+    flex-direction: column;
+}
+
 .justify--between {
     justify-content: space-between;
 }
@@ -67,7 +71,7 @@
     margin: 0 auto;
 }
 
-.block {
+.display--block {
     display: block;
 }
 
