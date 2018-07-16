@@ -22,7 +22,7 @@
     height: 380px;
 
     @include media($screen-sm) {
-        height: calc(100vh - 120px);
+        height: calc(80vh - 100px);
     }
 
 
@@ -59,7 +59,8 @@
             }
         }
 
-        @include media($max-sm){
+
+        @include media($max-lg) {
             width: 80%;
         }
     }
@@ -83,21 +84,28 @@
                 z-index: 101;
                 height: calc(100% + 185px);
                 background: url(../images/lines.svg);
-                
                 background-position: center;
 
                 @include media($max-sm) {
                     height: calc(100% + 145px);
-                    
                 }
-                background-size: 650%;
-                @include media($screen-xs){
-                    background-size: 400%;
-                }
-                @include media($screen-lg){background-size: 220vw;}
 
-                @include media($screen-lg){}
-                @include media($screen-xl){}
+
+                background-size: 650%;
+
+                @include media($screen-xs) {
+                    background-size: 500%;
+                }
+
+
+                @include media($screen-lg) {
+                    background-size: 220vw;
+                }
+
+
+                @include media($screen-lg) {}
+
+                @include media($screen-xl) {}
             }
         }
 
@@ -138,20 +146,17 @@
                     border-top: 10px solid white;
 
                     @include media($screen-sm) {
-border-top: 0px solid $gold;
-transition: border .2s $base-animation;
+                        border-top: 0px solid $gold;
+                        transition: border 0.2s $base-animation;
                         min-height: 150px;
                     }
 
 
                     &.is-nav-selected {
                         @include media($screen-sm) {
-                            transition: border .2s $base-animation;
-border-top: 10px solid $gold;
+                            transition: border 0.2s $base-animation;
+                            border-top: 10px solid $gold;
                         }
-
-
-                        
                     }
 
                     @include media($max-sm) {
