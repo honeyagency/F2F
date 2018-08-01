@@ -45,10 +45,15 @@ function prepareHomepageFields()
             if (empty($date)) {
                 $date = get_field('field_57834abc64615', $event);
             }
+            $endDate = get_field('field_5b6201e24caa3', $event);
+            if (empty($endDate)) {
+                $endDate = get_field('field_5b6204e9857d6', $event);
+            } 
             $events[] = array(
                 'image' => $image,
                 'title' => get_the_title($event),
                 'date'  => $date,
+                'end'   => $endDate,
                 'link'  => get_the_permalink($event),
             );
         }
@@ -229,7 +234,7 @@ function prepareExtendedSignatureEventFields()
     );
     $section = array(
         'sponsors' => $sponsors,
-        'ads'       => $ads,
+        'ads'      => $ads,
     );
     return $section;
 }

@@ -20,8 +20,25 @@
         },
         {
             "key": "field_558b9672c7fdf",
-            "label": "Date",
+            "label": "Start Date",
             "name": "date",
+            "type": "date_picker",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "display_format": "m\/d\/Y",
+            "return_format": "Ymd",
+            "first_day": 1
+        },
+        {
+            "key": "field_5b6201e24caa3",
+            "label": "End Date",
+            "name": "end_date",
             "type": "date_picker",
             "instructions": "",
             "required": 0,
@@ -70,9 +87,7 @@
             "placeholder": "",
             "prepend": "",
             "append": "",
-            "maxlength": "",
-            "readonly": 0,
-            "disabled": 0
+            "maxlength": ""
         },
         {
             "key": "field_558b9a60872dd",
@@ -124,7 +139,7 @@
             },
             "min": 7,
             "max": 7,
-            "preview_size": "thumbnail",
+            "insert": "append",
             "library": "all",
             "min_width": "",
             "min_height": "",
@@ -132,8 +147,7 @@
             "max_width": "",
             "max_height": "",
             "max_size": "",
-            "mime_types": "",
-            "insert": "append"
+            "mime_types": ""
         },
         {
             "key": "field_558b9672c7ebc",
@@ -168,9 +182,7 @@
             "placeholder": "",
             "prepend": "",
             "append": "",
-            "maxlength": "",
-            "readonly": 0,
-            "disabled": 0
+            "maxlength": ""
         },
         {
             "key": "field_558b9672c86c2",
@@ -245,9 +257,7 @@
             "placeholder": "",
             "prepend": "",
             "append": "",
-            "maxlength": "",
-            "readonly": 0,
-            "disabled": 0
+            "maxlength": ""
         },
         {
             "key": "field_558b987694ed1",
@@ -262,6 +272,7 @@
                 "class": "",
                 "id": ""
             },
+            "collapsed": "",
             "min": 0,
             "max": 60,
             "layout": "table",
@@ -328,8 +339,7 @@
                     "default_value": "",
                     "placeholder": ""
                 }
-            ],
-            "collapsed": ""
+            ]
         }
     ],
     "location": [
@@ -347,7 +357,6 @@
     "label_placement": "top",
     "instruction_placement": "label",
     "hide_on_screen": [
-        "custom_fields",
         "discussion",
         "comments",
         "author",
@@ -358,5 +367,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1519856641
+    "modified": 1533149694
 }

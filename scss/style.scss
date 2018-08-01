@@ -1293,6 +1293,18 @@ ol li:before {
     line-height: 43px;
 }
 
+.date {
+    &.end {
+        span {
+            font-size: 24px;
+            display: inline-block;
+        }
+        .dash{
+            margin-left: -3px;
+        }
+    }
+}
+
 /* more links styles */
 
 .more-links {

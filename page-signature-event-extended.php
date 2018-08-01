@@ -54,15 +54,22 @@ $context['event'] = prepareExtendedSignatureEventFields();
 				<!-- content block -->
 				<div class="content-block">
 					<aside class="event-detail">
-                    <?php if($date = get_field('date')){ ?>
+                     <?php if($startDate = get_field('field_57834abc64615')){ ?>
 						<div class="date-title">
-							<div class="date">
-                            <?php $date = DateTime::createFromFormat('Ymd', $date); ?>
-								<time datetime="<?php echo $date->format('Y-m-d');?>">
-									<?php echo $date->format('M');?>
-									<span><?php echo $date->format('d');?></span>
+							<div class="date <?php if($endDate = get_field('field_5b6204e9857d6')){echo 'end'; } ?>">
+                            <?php $startDate = DateTime::createFromFormat('Ymd', $startDate); ?>
+								<time datetime="<?php echo $startDate->format('Y-m-d');?>">
+									<div><?php echo $startDate->format('M');?></div>
+									<span><?php echo $startDate->format('d');?></span>
 								</time>
+								<?php if($endDate){ ?>
+							<?php $endDate = DateTime::createFromFormat('Ymd', $endDate); ?>
+								<time datetime="<?php echo $endDate->format('Y-m-d');?>">
+									<span><span class="dash"> - </span><?php echo $endDate->format('d');?></span>
+								</time>
+								<?php } ?>
 							</div>
+							
 						</div>
                     <?php } ?>
 						<div class="detail-holder">
@@ -119,13 +126,18 @@ $context['event'] = prepareExtendedSignatureEventFields();
 					<!-- main content part -->
 					<section class="content">
 						<div class="content-box">
-						<?php if($date){ ?>
+						<?php if($startDate){ ?>
                             <div class="date-title">
-								<div class="date">
-									<time datetime="<?php echo $date->format('Y-m-d');?>">
-										<?php echo $date->format('M');?>
-										<span><?php echo $date->format('d');?></span>
+								<div class="date <?php if($endDate){echo 'end'; } ?>">
+									<time datetime="<?php echo $startDate->format('Y-m-d');?>">
+										<div><?php echo $startDate->format('M');?></div>
+										<span><?php echo $startDate->format('d');?></span>
 									</time>
+										<?php if($endDate){ ?>
+								<time datetime="<?php echo $endDate->format('Y-m-d');?>">
+									<span><span class="dash"> - </span><?php echo $endDate->format('d');?></span>
+								</time>
+								<?php } ?>
 								</div>
 							</div>
                         <?php }?>

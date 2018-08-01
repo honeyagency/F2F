@@ -15,7 +15,8 @@
 			<div class="event--slide-nav grid--one grid--sm-fourth bg--white spacing--horiz-2 spacing--vert-1 flex flex--column justify--between">
 				<div class="event--slide-meta font--small letter--1 text--uppercase">
 					<strong>{{event.title}}</strong><br>
-					<time class="font--bold color--gray">{{event.date|date('M d')}}</time>
+					{% if event.date %}<time class="font--bold color--gray">{{event.date|date('M d')}}</time>{% endif %}
+					{% if event.end %}<time class="font--bold color--gray">- {{event.end|date('d')}}</time>{% endif %}
 				</div>
 				<div>
 					<a href="{{event.link}}" class="text--uppercase font--tiny letter--1 display--block">Read More</a>
